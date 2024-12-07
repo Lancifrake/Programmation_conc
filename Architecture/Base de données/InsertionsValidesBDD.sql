@@ -116,10 +116,10 @@ VALUES
 (2, '2024-12-04 20:15:00', 'EnPréparation');
 
 -- Insertion des détails des commandes
-INSERT INTO DetailsCommandes (CommandeID, NomPlat, NombrePlats)
+INSERT INTO DetailsCommandes (CommandeID,RecetteID, NombrePlats)
 VALUES
-(1, 'Feuilleté au crabe', 2),
-(2, 'Blanquette de veau', 1);
+(1, 2, 2),
+(2, 1, 1);
 
 -- Insertion des équipements
 INSERT INTO Equipements (NomEquipement, Quantite, Localisation)
