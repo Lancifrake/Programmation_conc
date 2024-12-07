@@ -106,9 +106,10 @@ CREATE TABLE Commandes (
 CREATE TABLE DetailsCommandes (
     DetailsID INT AUTO_INCREMENT PRIMARY KEY,
     CommandeID INT NOT NULL,
-    NomPlat VARCHAR(100),
+    RecetteID INT NOT NULL),
     NombrePlats INT,
-    FOREIGN KEY (CommandeID) REFERENCES Commandes(CommandeID)
+    FOREIGN KEY (CommandeID) REFERENCES Commandes(CommandeID),
+    FOREIGN KEY (RecetteID) REFERENCES Recettes(RecetteID)
 );
 
 -- Table pour les équipements
