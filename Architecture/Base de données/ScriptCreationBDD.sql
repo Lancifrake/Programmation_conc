@@ -13,8 +13,8 @@ CREATE TABLE Recettes (
     RecetteID INT AUTO_INCREMENT PRIMARY KEY,
     NomRecette VARCHAR(100) NOT NULL,
     CategorieID INT NOT NULL, -- Lien vers la catégorie
-    NombrePersonnes INT NOT NULL,
-    TempsPreparation TIME NOT NULL, -- Temps de préparation en heures:minutes:secondes
+    NombrePersonnes INT ,
+    TempsPreparation TIME , -- Temps de préparation en heures:minutes:secondes
     TempsCuisson TIME,
     TempsRepos TIME,
     FOREIGN KEY (CategorieID) REFERENCES CategoriesRecettes(CategorieID)
@@ -45,7 +45,7 @@ CREATE TABLE Employes (
     Role ENUM('MaitreHotel', 'ChefRang', 'Serveur', 'CommisSalle', 'ChefCuisine', 'ChefPartie', 'CommisCuisine', 'Plongeur') NOT NULL,
     Salaire DECIMAL(10, 2),
     HoraireEmploye ENUM('Matin', 'Soir'),
-    SecteurID INT NULL,
+    SecteurID INT ,
     FOREIGN KEY (SecteurID) REFERENCES Secteurs(SecteurID)
 );
 
