@@ -46,24 +46,14 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (1, '3 cuillères à soupe de persil haché', '3 c à s'),
 (1, '1 pointe de couteau de piment de Cayenne', '1 pointe');
 
--- Ingrédients pour Œufs cocotte
+-- Ingrédients pour Feuilleté au crabe
+  
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (2, '1 œuf par personne', '1 par personne'),
 (2, '1 sachet de gruyère râpé', '1 sachet'),
 (2, 'Sel', NULL),
 (2, 'Crème fraîche', NULL),
 (2, 'Poivre', NULL);
-
--- Ingrédients pour Blanquette de veau
-INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(5, '1 kg de viande de veau', '1 kg'),
-(5, '1 cube de bouillon de poule', '1 cube'),
-(5, '2 ou 3 carottes', '2-3'),
-(5, '1 pot de crème', '1 pot'),
-(5, '1 jaune d’œuf', '1'),
-(5, 'Champignons', NULL),
-(5, 'Jus de citron', '1'),
-(5, '25 cl de vin blanc', '25 cl');
 
 -- Ingrédients pour Bouillinade d’anguilles ou de poissons
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -73,7 +63,7 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (3, 'Saindoux', NULL),
 (3, 'Sel et poivre', NULL),
 (3, 'Piment', NULL),
-(3, 'Pommes de terre', NULL);
+(3, 'Pommes de terre', NULL);  
 
 -- Ingrédients pour Boles de picoulats
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -88,15 +78,30 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (4, '1 bon verre de farine', '1 verre'),
 (4, '1 bon verre de vinaigre de vin rouge', '1 verre');
 
--- Ingrédients pour Tarte au thon
+-- Ingrédients pour Blanquette de veau
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(10, '1 pâte feuilletée', '1 rouleau'),
-(10, '30 gr de beurre', '30gr'),
-(10, '50 gr de farine', '50gr'),
-(10, '1/2 litre de lait', '0.5L'),
-(10, '1/2 boîte de champignons de Paris', '0.5 boîte'),
-(10, '1 boîte de thon', '1 boîte'),
-(10, 'Gruyère râpé', NULL);
+(5, '1 kg de viande de veau', '1 kg'),
+(5, '1 cube de bouillon de poule', '1 cube'),
+(5, '2 ou 3 carottes', '2-3'),
+(5, '1 pot de crème', '1 pot'),
+(5, '1 jaune d’œuf', '1'),
+(5, 'Champignons', NULL),
+(5, 'Jus de citron', '1'),
+(5, '25 cl de vin blanc', '25 cl');
+
+-- Ingrédients pour le gaspatcho
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(6, '6 tomates mûres', '6'),
+(6, '1 concombre', '1'),
+(6, '1 poivron vert', '1'),
+(6, '1 oignon', '1'),
+(6, '2 gousses d\'ail', '2'),
+(6, '50g de pain de mie rassis', '50g'),
+(6, '1/4 de tasse de vinaigre de vin', '1/4 de tasse'),
+(6, '1/4 de tasse d\'huile d\'olive', '1/4 de tasse'),
+(6, 'Sel', NULL),
+(6, 'Poivre', NULL),
+(6, 'Eau froide', '300ml');
 
 -- Ingrédients pour Gaufres
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -113,6 +118,19 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (8, 'Sel et poivre', NULL),
 (8, '50 gr de sel par kg', '50 gr par kg'),
 (8, '6 gr de poivre par kg', '6 gr par kg');
+
+
+-- Ingrédients pour Tarte au thon
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(10, '1 pâte feuilletée', '1 rouleau'),
+(10, '30 gr de beurre', '30gr'),
+(10, '50 gr de farine', '50gr'),
+(10, '1/2 litre de lait', '0.5L'),
+(10, '1/2 boîte de champignons de Paris', '0.5 boîte'),
+(10, '1 boîte de thon', '1 boîte'),
+(10, 'Gruyère râpé', NULL);
+
+
 
 -- Ingrédients pour Escargots à la Catalane
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -156,6 +174,25 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (19, 'Mouton ou merguez', NULL),
 (19, '1 bouquet de coriandre', '1 bouquet'),
 (19, 'Colorant', NULL);
+
+-- Insertion des ingrédients pour les Cagouilles à la Charentaise
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(20, 'Escargots petits-gris (100 pièces jeûnés 15 jours)', '100 pièces'),
+(20, 'Chair à saucisse', '200 g'),
+(20, 'Talon de jambon', '150 g'),
+(20, 'Couenne de porc', '100 g'),
+(20, 'Échalotes', '4'),
+(20, 'Tomates', '4'),
+(20, 'Gousses d\'ail', '4'),
+(20, 'Concentré de tomate', '1 c à soupe'),
+(20, 'Graisse d\'oie', '1 c à soupe'),
+(20, 'Persil plat', '1 botte'),
+(20, 'Bouquet garni', '1 bouquet'),
+(20, 'Fenouil sauvage', '1 branche'),
+(20, 'Vinaigre blanc', '1 verre'),
+(20, 'Gros sel', '1 poignée'),
+(20, 'Poivre du moulin','4');
+
 
 -- Ingrédients pour Tiramisu
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -229,13 +266,26 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (4, 5, 'Ajouter les boulettes une à une, porter à ébullition et laisser cuire 25 minutes.'),
 (4, 6, 'Ajouter les pommes de terre coupées en quatre et cuire à feu doux.');
 
--- Étapes pour Tarte au thon
+-- Étapes pour Blanquettes de veau
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(10, 1, 'Étaler la pâte dans un moule et la piquer avec une fourchette.'),
-(10, 2, 'Faire fondre le beurre, y ajouter la farine et le lait petit à petit, bien mélanger jusqu’à épaississement.'),
-(10, 3, 'Saler et poivrer, puis ajouter le thon égoutté et les champignons.'),
-(10, 4, 'Mettre la préparation sur la pâte et parsemer de gruyère.'),
-(10, 5, 'Mettre au four 20 minutes.');
+(5, 1, 'Faire chauffer une grande casserole avec de l\'huile ou du beurre et y faire revenir la viande de veau coupée en morceaux.'),
+(5, 2, 'Ajouter les oignons et les carottes coupées en rondelles, puis faire dorer légèrement le tout.'),
+(5, 3, 'Ajouter le vin blanc et un bouquet garni (thym, laurier, etc.), couvrir d\'eau et laisser mijoter pendant environ 1h30 à feu doux.'),
+(5, 4, 'Retirer la viande et les légumes de la casserole, puis passer le bouillon pour le filtrer.'),
+(5, 5, 'Dans une casserole, faire fondre du beurre, ajouter de la farine pour préparer un roux, puis verser petit à petit le bouillon filtré en fouettant pour éviter les grumeaux.'),
+(5, 6, 'Laisser épaissir la sauce à feu doux et ajouter la crème fraîche et le jaune d\'œuf pour lier le tout.'),
+(5, 7, 'Remettre la viande et les légumes dans la sauce, mélanger doucement et laisser cuire encore 10 à 15 minutes à feu doux.'),
+(5, 8, 'Servir la blanquette de veau bien chaude, accompagnée de riz ou de pommes de terre vapeur.');
+
+-- Étapes pour le gaspatcho
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(6, 1, 'Laver et éplucher les tomates, le concombre, le poivron et l\'oignon. Couper tous les légumes en morceaux.'),
+(6, 2, 'Éplucher l\'ail et retirer le germe. Si le pain de mie est trop dur, le tremper dans un peu d\'eau pour le ramollir.'),
+(6, 3, 'Mettre tous les légumes, l\'ail, le pain de mie dans un mixeur, ajouter le vinaigre, l\'huile d\'olive, le sel et le poivre. Mixer jusqu\'à obtention d\'une consistance lisse.'),
+(6, 4, 'Ajouter progressivement de l\'eau froide en fonction de la consistance désirée (si vous préférez un gazpacho plus liquide, ajoutez plus d\'eau).'),
+(6, 5, 'Goûter et ajuster l\'assaisonnement si nécessaire, puis passer le gazpacho dans une passoire fine ou un chinois pour éliminer les morceaux.'),
+(6, 6, 'Réfrigérer pendant au moins 2 heures avant de servir pour que la soupe soit bien froide.'),
+(6, 7, 'Servir dans des bols ou des verres avec un filet d\'huile d\'olive et des croûtons si souhaité.');
 
 -- Étapes pour Gaufres
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
@@ -250,6 +300,16 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (8, 2, 'Mélanger avec les épices : sel et poivre.'),
 (8, 3, 'Remplir les bocaux en tassant légèrement.'),
 (8, 4, 'Faire cuire les bocaux au bain-marie pendant 2 heures.');
+
+-- Étapes pour Tarte au thon
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(10, 1, 'Étaler la pâte dans un moule et la piquer avec une fourchette.'),
+(10, 2, 'Faire fondre le beurre, y ajouter la farine et le lait petit à petit, bien mélanger jusqu’à épaississement.'),
+(10, 3, 'Saler et poivrer, puis ajouter le thon égoutté et les champignons.'),
+(10, 4, 'Mettre la préparation sur la pâte et parsemer de gruyère.'),
+(10, 5, 'Mettre au four 20 minutes.');
+
+
 
 -- Étapes pour Escargots à la Catalane
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
@@ -284,6 +344,16 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (19, 4, 'Ajouter la chair à saucisse, la couenne de porc et le talon de jambon haché, puis faire cuire 10 minutes.'),
 (19, 5, 'Incorporer les escargots et 1 litre de bouillon, laisser mijoter pendant 1 heure.');
 
+-- Insertion des étapes pour les Cagouilles à la Charentaise
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(20, 1, 'Lavez les escargots 3 fois avec un peu de vinaigre et de gros sel pour les faire dégorger.'),
+(20, 2, 'Cuisez-les 1 heure dans de l’eau bouillante salée avec le bouquet garni et la branche de fenouil sauvage, puis égouttez-les. Réservez 1 litre du bouillon de cuisson.'),
+(20, 3, 'Ébouillantez les tomates et enlevez leur peau et les pépins, puis concassez-les.'),
+(20, 4, 'Ciselez les échalotes, hachez les gousses d’ail.'),
+(20, 5, 'Dans une cocotte, faites revenir les tomates, les échalotes et les gousses d’ail avec la graisse d’oie, ajoutez la chair à saucisse, la couenne de porc et le talon de jambon haché.'),
+(20, 6, 'Finissez avec le concentré de tomate.'),
+(20, 7, 'Faites cuire le tout 10 minutes, incorporez les escargots en coquille et 1 litre du bouillon de cuisson. Remuez délicatement et remettez sur le feu 1 heure à couvert.'),
+(20, 8, 'Juste avant de servir, parsemez du persil haché et assaisonnez.');
 
 -- Étapes pour Tiramisu
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
