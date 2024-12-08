@@ -35,145 +35,220 @@ INSERT INTO Recettes (NomRecette, CategorieID, NombrePersonnes, TempsPreparation
 
 -- Ingrédients pour Feuilleté au crabe
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(1, '300g de pâte feuilletée', '300g'),
-(1, '2 œufs', '2'),
+(1, 'Pâte feuilletée', '300g'),
+(1, 'Œufs', '2'),
 (1, 'Sel et poivre', NULL),
-(1, '3 ou 4 c à s de crème fraiche', '3-4 c à s'),
-(1, '2 cuillères à soupe de chapelure', '2 c à s'),
-(1, '2 petits oignons ou échalotes', '2'),
-(1, '120g de chair de crabe', '120g'),
-(1, 'Le jus d\'un citron', '1 citron'),
-(1, '3 cuillères à soupe de persil haché', '3 c à s'),
-(1, '1 pointe de couteau de piment de Cayenne', '1 pointe');
+(1, 'Crème fraîche', '3 ou 4 c à s'),
+(1, 'Chapelure', '2 c à soupe'),
+(1, 'Oignons ou échalotes', '2 petits'),
+(1, 'Chair de crabe', '120g'),
+(1, 'Jus de citron', '1'),
+(1, 'Persil haché', '3 c à soupe'),
+(1, 'Piment de Cayenne', '1 pointe de couteau');
 
--- Ingrédients pour Feuilleté au crabe
-  
+-- Ingrédients pour Oeufs cocotte
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(2, '1 œuf par personne', '1 par personne'),
-(2, '1 sachet de gruyère râpé', '1 sachet'),
+(2, 'Œuf par personne', '1'),
+(2, 'Sachet de gruyère râpé', '1 sachet'),
 (2, 'Sel', NULL),
 (2, 'Crème fraîche', NULL),
 (2, 'Poivre', NULL);
 
 -- Ingrédients pour Bouillinade d’anguilles ou de poissons
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(3, 'Lotte, congre, rouget grondin, seiche, petit crabe', NULL),
-(3, 'Ail', NULL),
-(3, 'Farine', NULL),
-(3, 'Saindoux', NULL),
-(3, 'Sel et poivre', NULL),
-(3, 'Piment', NULL),
-(3, 'Pommes de terre', NULL);  
+(3, 'Lotte', '1'),
+(3, 'Congre', '1'),
+(3, 'Rouget grondin', '1'),
+(3, 'Seiche', '1'),
+(3, 'Petit crabe', '1'),
+(3, 'Ail', '1'),
+(3, 'Farine', '1'),
+(3, 'Saindoux', '1'),
+(3, 'Sel', '1'),
+(3, 'Poivre', '1'),
+(3, 'Piment', '1'),
+(3, 'Pommes de terre', '1');
 
 -- Ingrédients pour Boles de picoulats
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(4, '3kg de chair à saucisse', '3kg'),
-(4, '1kg de bœuf haché', '1kg'),
-(4, '2 oignons (mixé petit)', '2'),
-(4, '1 tête ½ d’ail (mixé petit)', '1.5'),
-(4, '2 œufs', '2'),
-(4, 'Sel et poivre', NULL),
-(4, '2 cubes de bouillon de bœuf', '2'),
-(4, '1 tube de concentré de tomate', '1 tube'),
-(4, '1 bon verre de farine', '1 verre'),
-(4, '1 bon verre de vinaigre de vin rouge', '1 verre');
+(4, 'Chair à saucisse', '3kg'),
+(4, 'Bœuf haché', '1kg'),
+(4, 'Oignons', '2'),
+(4, 'Ail', '1 tête ½'),
+(4, 'Œufs', '2'),
+(4, 'Sel', '1'),
+(4, 'Poivre', '1'),
+(4, 'Oignons pour sauce', '2'),
+(4, 'Ail pour sauce', '1 tête ½'),
+(4, 'Concentré de tomate', '1 tube'),
+(4, 'Farine', '1 bon verre'),
+(4, 'Vinaigre de vin rouge', '1 bon verre'),
+(4, 'Bouillon de bœuf', '2 cubes'),
+(4, 'Huile de tournesol', '1');
 
 -- Ingrédients pour Blanquette de veau
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(5, '1 kg de viande de veau', '1 kg'),
-(5, '1 cube de bouillon de poule', '1 cube'),
-(5, '2 ou 3 carottes', '2-3'),
-(5, '1 pot de crème', '1 pot'),
-(5, '1 jaune d’œuf', '1'),
-(5, 'Champignons', NULL),
+(5, 'Viande de veau', '1 kg'),
+(5, 'Cube de bouillon de poule', '1'),
+(5, 'Bouquet garni', '1'),
+(5, 'Bouillon de légumes', '1 petit peu'),
+(5, 'Carottes', '2-3'),
+(5, 'Champignons', '1'),
+(5, 'Pot de crème', '1'),
 (5, 'Jus de citron', '1'),
-(5, '25 cl de vin blanc', '25 cl');
+(5, 'Œuf', '1'),
+(5, 'Vin blanc', '25 cl');
 
 -- Ingrédients pour le gaspatcho
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(6, '6 tomates mûres', '6'),
-(6, '1 concombre', '1'),
-(6, '1 poivron vert', '1'),
-(6, '1 oignon', '1'),
-(6, '2 gousses d\'ail', '2'),
-(6, '50g de pain de mie rassis', '50g'),
-(6, '1/4 de tasse de vinaigre de vin', '1/4 de tasse'),
-(6, '1/4 de tasse d\'huile d\'olive', '1/4 de tasse'),
-(6, 'Sel', NULL),
-(6, 'Poivre', NULL),
-(6, 'Eau froide', '300ml');
+(6, 'Tomates', '1'),
+(6, 'Oignons', '1'),
+(6, 'Concombre', '1'),
+(6, 'Pain rassis', '1'),
+(6, 'Huile d\'olive', '1'),
+(6, 'Vinaigre', '1'),
+(6, 'Poivron', '1'),
+(6, 'Sel', '1'),
+(6, 'Poivre', '1');
 
 -- Ingrédients pour Gaufres
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(7, '500 gr de farine', '500 gr'),
-(7, '250 gr de sucre', '250 gr'),
-(7, '1 litre de lait', '1 litre'),
-(7, '5 œufs', '5');
+(7, 'Farine', '250g'),
+(7, 'Œuf', '3'),
+(7, 'Beurre', '100g'),
+(7, 'Lait', '¼ l'),
+(7, 'Sucre en poudre', '75g'),
+(7, 'Sel', '1 pincée');
 
--- Ingrédients pour Pâté de sanglier
+-- Insertion des ingrédients pour le Pâté de sanglier
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(8, '2 kg de sanglier', '2 kg'),
-(8, '1 kg de ventrèche', '1 kg'),
-(8, '1 kg de chair à saucisse', '1 kg'),
-(8, 'Sel et poivre', NULL),
-(8, '50 gr de sel par kg', '50 gr par kg'),
-(8, '6 gr de poivre par kg', '6 gr par kg');
+(8, 'Sanglier', '2 kg'),
+(8, 'Ventrecie', '1 kg'),
+(8, 'Chair à saucisse', '1 kg'),
+(8, 'Gorge de porc ou de lard', '1 kg'),
+(8, 'Sel', '50 gr par kg'),
+(8, 'Poivre', '6 gr par kg');
 
+-- Insertion des ingrédients pour les crêpes  
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(10, 'Farine', '500 g'),
+(10, 'Sucre', '250 g'),
+(10, 'Lait', '1 litre'),
+(10, 'Œufs', '5');
 
 -- Ingrédients pour Tarte au thon
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(10, '1 pâte feuilletée', '1 rouleau'),
-(10, '30 gr de beurre', '30gr'),
-(10, '50 gr de farine', '50gr'),
-(10, '1/2 litre de lait', '0.5L'),
-(10, '1/2 boîte de champignons de Paris', '0.5 boîte'),
-(10, '1 boîte de thon', '1 boîte'),
-(10, 'Gruyère râpé', NULL);
+(11, 'Farine', '50 g'),
+(11, 'Lait', '1/2 litre'),
+(11, 'Champignons de Paris', '1/2 boîte'),
+(11, 'Thon', '1 boîte'),
+(11, 'Gruyère râpé', '1'),
+(11, 'Pâte feuilletée', '1'),
+(11, 'Beurre', '30 g'),
+(11, 'Sel', '1'),
+(11, 'Poivre', '1');
 
-
-
--- Ingrédients pour Escargots à la Catalane
+-- Ingrédients pour Quiche Lorraine
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(16, '100 escargots petits-gris', '100 pièces'),
-(16, '200 g de chair à saucisse', '200 g'),
-(16, '150 g de talon de jambon', '150 g'),
-(16, '100 g de couenne de porc', '100 g'),
-(16, '4 échalotes', '4'),
-(16, '4 tomates', '4'),
-(16, '1 cuillère à soupe de concentré de tomate', '1 cuillère à soupe'),
-(16, '1 cuillère à soupe de graisse d’oie', '1 cuillère à soupe'),
-(16, '1 verre de vin blanc sec', '1 verre');
+(12, 'Pâte feuilletée', '1 rouleau'),
+(12, 'Œufs entiers', '3'),
+(12, 'Crème fraîche', '30 cl'),
+(12, 'Lait', '25 cl'),
+(12, 'Lardons fumés', '300 g'),
+(12, 'Emmental râpé', '150 g'),
+(12, 'Sel', '1'),
+(12, 'Poivre', '1'),
+(12, 'Muscade', '1');
 
--- Ingrédients pour Soupe chinoise
+-- Insertion des ingrédients pour le Pâté de porc
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(17, '1 boîte de champignons chinois', '1 boîte'),
-(17, '1 boîte de petites crevettes décortiquées', '1 boîte'),
-(17, 'Ailes, cuisses ou pilon de poulet', NULL),
-(17, '4 carottes', '4'),
-(17, '2 poireaux', '2'),
-(17, '2 branches de céleri', '2'),
-(17, '1 bouillon cube', '1 cube'),
-(17, 'Coriandre', NULL),
-(17, 'Oignons verts', NULL);
+(13, 'Poitrines', '2'),
+(13, 'Foie', '1'),
+(13, 'Œufs', '12'),
+(13, 'Lait', '½ litre'),
+(13, 'Sel', '1'),
+(13, 'Poivre', '1');
 
--- Ingrédients pour Foie gras au muscat
+-- Insertion des ingrédients pour la recette (Foie gras à la vapeur)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(18, '1 foie gras cru de 5 à 600g', '5-600g'),
-(18, '1 cuillère à café de sel', '1 c à café'),
-(18, '1/2 ou 1 cuillère à café de poivre blanc', '1/2 - 1 c à café'),
-(18, '1 pincée de sucre', '1 pincée'),
-(18, '1 cuillère à soupe de Porto (ou Cognac ou Muscat)', '1 c à soupe');
+(14, 'Porto (ou cognac ou muscat)', '1 c à soupe'),
+(14, 'Film alimentaire', '1'),
+(14, 'Papier d\'aluminium', '1'),
+(14, 'Ficelle de boucher', '1'),
+(14, 'Appareil de cuisson à la vapeur', '1'),
+(14, 'Foie gras cru', '5-600 g'),
+(14, 'Sel', '1 bonne c à café'),
+(14, 'Poivre blanc', '1/2 c à café ou 1 c à café selon goût'),
+(14, 'Sucre', '1 pincée');
 
--- Ingrédients pour Chorba
+-- Insertion des ingrédients pour la recette (Blancs de poulet à la crème et au miel)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(19, '1 bol de langues d’oiseaux', '1 bol'),
-(19, '1 boîte de concentré de tomates', '1 boîte'),
-(19, 'Persil', NULL),
-(19, 'Épices raz el amout', NULL),
-(19, 'Sel et poivre', NULL),
-(19, 'Mouton ou merguez', NULL),
-(19, '1 bouquet de coriandre', '1 bouquet'),
-(19, 'Colorant', NULL);
+(15, 'Blancs de poulet', '3'),
+(15, 'Oignon', '1 gros'),
+(15, 'Vinaigre balsamique', '2 c à soupe'),
+(15, 'Miel', '1 c à soupe'),
+(15, 'Crème fraîche', '3 c à soupe'),
+(15, 'Huile d\'olive', '2 c à soupe');
+
+-- Insertion des ingrédients pour la recette (Escargots à la Catalane)
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(16, 'Poireau', '1'),
+(16, 'Oignon piqué d\'un clou de girofle', '1'),
+(16, 'Gousse d\'ail', '1'),
+(16, 'Thym', '1'),
+(16, 'Céleri', '1'),
+(16, 'Feuille de laurier', '1'),
+(16, 'Sel', '1'),
+(16, 'Poivre', '1'),
+(16, 'Jambon (en lardons)', '250 g'),
+(16, 'Gros oignon', '1'),
+(16, 'Piments verts doux', '2'),
+(16, 'Tomates', '2'),
+(16, 'Gousses d\'ail', '6'),
+(16, 'Persil', '1'),
+(16, 'Thym (pour sauce)', '1'),
+(16, 'Amandes', '100 g'),
+(16, 'Vin blanc sec', '1 verre'),
+(16, 'Huile d\'olive', '1'),
+(16, 'Sel (pour sauce)', '1'),
+(16, 'Poivre (pour sauce)', '1'),
+(16, 'Pointe de piment fort', '1');
+
+-- Insertion des ingrédients pour la recette (Soupe chinoise)
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(17, 'Champignons chinois', '1 boîte'),
+(17, 'Petites crevettes décortiquées', '1 boîte'),
+(17, 'Ailes de poulet', '1'),
+(17, 'Cuisses de poulet', '1'),
+(17, 'Pilon de poulet', '1'),
+(17, 'Carottes', '4'),
+(17, 'Poireaux', '2'),
+(17, 'Branches de céleri', '2'),
+(17, 'Bouillon cube', '1'),
+(17, 'Coriandre', '1'),
+(17, 'Oignons verts', '1');
+
+-- Insertion des ingrédients pour la recette ID 18 (Foie gras au muscat)
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(18, 'Foie gras', '1'),
+(18, 'Muscat', '1'),
+(18, 'Sel', '1'),
+(18, '5 baies', '1');
+
+-- Insertion des ingrédients pour la recette (Chorba)
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(19, 'Huile d\'olive', '1'),
+(19, 'Beurre', '1'),
+(19, 'Gros oignons', '3'),
+(19, 'Langues d\'oiseaux', '1 bol'),
+(19, 'Concentré de tomates', '1 boîte'),
+(19, 'Persil', '1'),
+(19, 'Épices raz el amout', '1'),
+(19, 'Sel', '1'),
+(19, 'Poivre', '1'),
+(19, 'Mouton ou merguez', '1'),
+(19, 'Bouquet de coriandre', '1'),
+(19, 'Colorant', '1');
 
 -- Insertion des ingrédients pour les Cagouilles à la Charentaise
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -193,37 +268,39 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (20, 'Gros sel', '1 poignée'),
 (20, 'Poivre du moulin','4');
 
-
--- Ingrédients pour Tiramisu
+-- Insertion des ingrédients pour la recette (Tiramisu)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(21, '3 gros œufs', '3'),
-(21, '100 g de sucre roux', '100 g'),
-(21, '1 sachet de sucre vanillé', '1 sachet'),
-(21, '250 g de mascarpone', '250 g'),
-(21, '24 biscuits à la cuillère', '24'),
-(21, '1/2 litre de café noir non sucré', '1/2 litre'),
-(21, '30 g de poudre de cacao amer', '30 g');
+(21, 'Œufs', '3 gros'),
+(21, 'Sucre roux', '100 g'),
+(21, 'Sucre vanillé', '1 sachet'),
+(21, 'Mascarpone', '250 g'),
+(21, 'Biscuits à la cuillère', '24'),
+(21, 'Café noir non sucré', '1/2 litre'),
+(21, 'Poudre de cacao amer', '30 g');
 
--- Ingrédients pour Madeleine au miel
-INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(22, '125 g de beurre fondu', '125 g'),
-(22, '3 œufs', '3'),
-(22, '130 g de sucre en poudre', '130 g'),
-(22, '1 cuillère à soupe de miel', '1 c à soupe'),
-(22, '150 g de farine', '150 g'),
-(22, '1/2 sachet de levure', '1/2 sachet'),
-(22, '1 citron non traité', '1'),
-(22, 'Une pincée de sel', '1 pincée');
 
--- Ingrédients pour Tagliatelles de concombre au saumon fumé
+-- Insertion des ingrédients pour la recette (Madeleine au miel)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(23, '2 concombres', '2'),
-(23, '200 g de saumon fumé', '200 g'),
-(23, '4 cuillères à soupe de crème fraîche', '4 c à s'),
-(23, 'Ciboulette', NULL),
-(23, '1 cuillère à café de moutarde', '1 c à café'),
-(23, 'Jus d\'un demi citron', '1/2 citron'),
-(23, 'Sel et poivre', NULL);
+(22, 'Beurre fondu', '125 g'),
+(22, 'Œufs', '3'),
+(22, 'Sucre en poudre', '130 g'),
+(22, 'Miel', '1 c à soupe rase'),
+(22, 'Farine', '150 g'),
+(22, 'Levure', '1/2 sachet'),
+(22, 'Citron non traité', '1'),
+(22, 'Sel', '1 pincée');
+
+
+-- Insertion des ingrédients pour la recette (Tagliatelles de concombre au saumon fumé)
+INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
+(23, 'Concombres', '2'),
+(23, 'Saumon fumé', '200 g'),
+(23, 'Crème fraîche', '4 c à s'),
+(23, 'Ciboulette', '1'),
+(23, 'Moutarde', '1 c à café'),
+(23, 'Jus de citron', '1/2 citron'),
+(23, 'Sel', '1'),
+(23, 'Poivre', '1');
 
 
 
@@ -309,16 +386,63 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (10, 4, 'Mettre la préparation sur la pâte et parsemer de gruyère.'),
 (10, 5, 'Mettre au four 20 minutes.');
 
-
-
--- Étapes pour Escargots à la Catalane
+-- Insertion des étapes pour la recette Quiche Lorraine
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(16, 1, 'Laver les escargots plusieurs fois avec du sel et du vinaigre.'),
-(16, 2, 'Faire cuire les escargots dans un court-bouillon pendant 15 minutes.'),
-(16, 3, 'Dans une cocotte, faire revenir les tomates, les échalotes et l’ail avec la graisse d’oie.'),
-(16, 4, 'Ajouter la chair à saucisse, le talon de jambon et la couenne de porc hachés.'),
-(16, 5, 'Ajouter le concentré de tomate et le vin blanc, puis incorporer les escargots.'),
-(16, 6, 'Laisser mijoter à feu doux pendant 45 minutes.');
+(11, 1, 'Mettre le four à préchauffer à 250°C pendant 10 minutes.'),
+(11, 2, 'Dans le moule à tarte, étalez la pâte feuilletée préalablement sortie du réfrigérateur 30 minutes avant (elle devient ainsi plus facilement déroulable).'),
+(11, 3, 'Piquez un peu partout la pâte avec une fourchette afin d’éviter que celle-ci ne gonfle.'),
+(11, 4, 'Mettez la pâte dans le moule dans le four chaud pendant 10 minutes, le temps que la pâte dore très légèrement.'),
+(11, 5, 'Sortez la pâte et laissez-la reposer pendant que vous préparez l’appareil.'),
+(11, 6, 'Durant la pré-cuisson de la pâte, prenez les lardons et faites-les cuire à la poêle à feu vif. Égouttez-les avec une passoire afin de faire partir leur graisse et de les griller légèrement pour leur donner davantage de saveur.'),
+(11, 7, 'Prenez un saladier, cassez-y les 3 œufs puis versez la crème fraîche. Mélangez les œufs et la crème fraîche avec un fouet.'),
+(11, 8, 'Rajoutez progressivement le lait tout en continuant à mélanger avec le fouet.'),
+(11, 9, 'Ajoutez le sel et le poivre, puis la muscade.'),
+(11, 10, 'Étalez les lardons sur la pâte précuite de manière harmonieuse et régulière.'),
+(11, 11, 'Versez dessus l’appareil à Quiche Lorraine.'),
+(11, 12, 'Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental râpé.'),
+(11, 13, 'Enfournez la Quiche Lorraine durant 30 minutes à 250°C.'),
+(11, 14, 'Au bout de 25 minutes, piquez avec un couteau la quiche. Si celui-ci ressort sec sans traces de crème fraîche, votre quiche est prête.'),
+(11, 15, 'Pour donner plus de craquant, n’hésitez pas à passer 5 minutes votre four en mode grill (s’il en est pourvu). Attention toutefois à ne pas brûler le dessus de votre quiche.');
+
+-- Insertion des étapes pour la recette le Pâté de foie de volaille
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(12, 1, 'Hacher la poitrine et le foie, mettre le hachis dans une grande bassine, puis ajouter les œufs, le lait, le sel et le poivre. Bien mélanger le tout.'),
+(12, 2, 'Prendre une fourchette de pâté et faire cuire dans une poêle, goûter et rectifier l’assaisonnement.'),
+(12, 3, 'Remplir les pots en prenant soin d’essuyer les bords avant de fermer.'),
+(12, 4, 'Faire bouillir l’eau dans la lessiveuse puis baisser le feu et cuire pendant 3 heures.'),
+(12, 5, 'Sortir les pots le lendemain lorsqu’ils sont froids.');
+
+-- Insertion des étapes pour la recette (Foie gras à la vapeur)
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(14, 1, 'Séparer les lobes du foie gras, retirer les nerfs avec la pointe d’un couteau.'),
+(14, 2, 'Assaisonner le foie gras avec le sel, le poivre blanc, le sucre, et ajouter le porto (ou cognac ou muscat).'),
+(14, 3, 'Enrouler le foie gras dans du film alimentaire, puis dans du papier d\'aluminium en serrant bien les bords.'),
+(14, 4, 'Ficeler le foie gras à l’aide de la ficelle de boucher pour maintenir une forme compacte.'),
+(14, 5, 'Faire cuire à la vapeur pendant 4 à 5 minutes pour un foie gras rosé ou à cœur.'),
+(14, 6, 'Laisser refroidir, puis réfrigérer pendant 5 jours avant de couper en tranches.');
+
+-- Insertion des étapes pour la recette (Blancs de poulet à la crème et au miel)
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(15, 1, 'Coupez les blancs de poulet en petits cubes, épluchez l\'oignon et émincez-le.'),
+(15, 2, 'Faites chauffer l\'huile dans une poêle et faites-y revenir l\'oignon et les morceaux de blancs de poulet.'),
+(15, 3, 'Quand ils sont dorés, ajoutez le vinaigre et le miel, puis laissez mijoter pendant 3 minutes.'),
+(15, 4, 'Ajoutez la crème et remuez bien pour l\'incorporer.'),
+(15, 5, 'Servez aussitôt accompagné de riz.');
+
+
+-- Insertion des étapes pour la recette ID 16 (Escargots à la Catalane)
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(16, 1, 'Lavez à grandes eaux les escargots ayant jeûné.'),
+(16, 2, 'Retirez les opercules.'),
+(16, 3, 'Passez-les plusieurs fois dans du gros sel puis dans du vinaigre pour les faire « baver ». Rincez-les une dernière fois puis égouttez-les.'),
+(16, 4, 'Faites le court-bouillon dans une marmite contenant 2 litres d’eau et l’ensemble des ingrédients. Laissez bouillir pendant 10 minutes. Jetez-y les escargots propres. Laissez-les cuire 15 minutes dès que l’ébullition a repris. Égouttez-les.'),
+(16, 5, 'Pendant ce temps, dans une cocotte contenant de l’huile d’olive, faites revenir l’oignon coupé en morceaux, les piments épépinés et coupés très fins, le jambon, et en dernier 4 gousses d’ail hachées.'),
+(16, 6, 'Coupez-y les tomates pelées. Faites mijoter 5 minutes à couvert.'),
+(16, 7, 'Ajoutez le vin blanc et les escargots égouttés ; salez, poivrez et pimentez. Mélangez.'),
+(16, 8, 'Laissez cuire à feu très doux pendant 45 minutes.'),
+(16, 9, '5 minutes avant la fin de la cuisson, ajoutez 2 gousses d’ail, le persil et les amandes (les 3 ingrédients doivent être pilés ensemble).'),
+(16, 10, 'C’est prêt !!!');
+
 
 -- Étapes pour Soupe chinoise
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
