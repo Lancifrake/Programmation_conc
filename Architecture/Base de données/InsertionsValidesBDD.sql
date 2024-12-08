@@ -378,97 +378,102 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (8, 3, 'Remplir les bocaux en tassant légèrement.'),
 (8, 4, 'Faire cuire les bocaux au bain-marie pendant 2 heures.');
 
--- Étapes pour Tarte au thon
+-- Insertion de l'étape pour la recette ID 10 (Crêpes)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(10, 1, 'Étaler la pâte dans un moule et la piquer avec une fourchette.'),
-(10, 2, 'Faire fondre le beurre, y ajouter la farine et le lait petit à petit, bien mélanger jusqu’à épaississement.'),
-(10, 3, 'Saler et poivrer, puis ajouter le thon égoutté et les champignons.'),
-(10, 4, 'Mettre la préparation sur la pâte et parsemer de gruyère.'),
-(10, 5, 'Mettre au four 20 minutes.');
+(10, 1, 'Cuire à la crépière.');
 
--- Insertion des étapes pour la recette Quiche Lorraine
+-- Insertion des étapes pour la recette (Tarte au thon)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(11, 1, 'Mettre le four à préchauffer à 250°C pendant 10 minutes.'),
-(11, 2, 'Dans le moule à tarte, étalez la pâte feuilletée préalablement sortie du réfrigérateur 30 minutes avant (elle devient ainsi plus facilement déroulable).'),
-(11, 3, 'Piquez un peu partout la pâte avec une fourchette afin d’éviter que celle-ci ne gonfle.'),
-(11, 4, 'Mettez la pâte dans le moule dans le four chaud pendant 10 minutes, le temps que la pâte dore très légèrement.'),
-(11, 5, 'Sortez la pâte et laissez-la reposer pendant que vous préparez l’appareil.'),
-(11, 6, 'Durant la pré-cuisson de la pâte, prenez les lardons et faites-les cuire à la poêle à feu vif. Égouttez-les avec une passoire afin de faire partir leur graisse et de les griller légèrement pour leur donner davantage de saveur.'),
-(11, 7, 'Prenez un saladier, cassez-y les 3 œufs puis versez la crème fraîche. Mélangez les œufs et la crème fraîche avec un fouet.'),
-(11, 8, 'Rajoutez progressivement le lait tout en continuant à mélanger avec le fouet.'),
-(11, 9, 'Ajoutez le sel et le poivre, puis la muscade.'),
-(11, 10, 'Étalez les lardons sur la pâte précuite de manière harmonieuse et régulière.'),
-(11, 11, 'Versez dessus l’appareil à Quiche Lorraine.'),
-(11, 12, 'Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental râpé.'),
-(11, 13, 'Enfournez la Quiche Lorraine durant 30 minutes à 250°C.'),
-(11, 14, 'Au bout de 25 minutes, piquez avec un couteau la quiche. Si celui-ci ressort sec sans traces de crème fraîche, votre quiche est prête.'),
-(11, 15, 'Pour donner plus de craquant, n’hésitez pas à passer 5 minutes votre four en mode grill (s’il en est pourvu). Attention toutefois à ne pas brûler le dessus de votre quiche.');
+(11, 1, 'Étaler la pâte dans un moule.'),
+(11, 2, 'Faire fondre le beurre, y ajouter la farine et le lait petit à petit.'),
+(11, 3, 'Bien mélanger à l\'aide d\'un fouet jusqu\'à épaississement, saler et poivrer.'),
+(11, 4, 'Égoutter le thon et les champignons puis les ajouter à la béchamelle.'),
+(11, 5, 'Mettre l\'appareil sur la pâte et parsemer de gruyère râpé.'),
+(11, 6, 'Mettre au four pendant 20 minutes.');
 
--- Insertion des étapes pour la recette le Pâté de foie de volaille
+-- Insertion des étapes pour la recette (Quiche Lorraine)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(12, 1, 'Hacher la poitrine et le foie, mettre le hachis dans une grande bassine, puis ajouter les œufs, le lait, le sel et le poivre. Bien mélanger le tout.'),
-(12, 2, 'Prendre une fourchette de pâté et faire cuire dans une poêle, goûter et rectifier l’assaisonnement.'),
-(12, 3, 'Remplir les pots en prenant soin d’essuyer les bords avant de fermer.'),
-(12, 4, 'Faire bouillir l’eau dans la lessiveuse puis baisser le feu et cuire pendant 3 heures.'),
-(12, 5, 'Sortir les pots le lendemain lorsqu’ils sont froids.');
+(12, 1, 'Mettre le four à préchauffer à 250°C pendant 10 minutes.'),
+(12, 2, 'Dans le moule à tarte, étalez la pâte feuilletée préalablement sortie du réfrigérateur 30 minutes avant (elle devient ainsi plus facilement déroulable).'),
+(12, 3, 'Piquez un peu partout la pâte avec une fourchette afin d’éviter que celle-ci ne gonfle.'),
+(12, 4, 'Mettez la pâte dans le moule dans le four chaud pendant 10 minutes, le temps que la pâte dore très légèrement.'),
+(12, 5, 'Sortez la pâte et laissez-la reposer pendant que vous préparez l’appareil.'),
+(12, 6, 'Durant la pré-cuisson de la pâte, prenez les lardons et faites-les cuire à la poêle à feu vif. Durant la cuisson, égouttez-les avec une passoire afin de faire partir leur graisse fondue, le but étant de les griller légèrement pour leur donner davantage de saveur.'),
+(12, 7, 'Prenez un saladier et cassez-y les 3 œufs, puis versez la crème fraîche. Mélangez les œufs et la crème fraîche avec un fouet.'),
+(12, 8, 'Rajoutez progressivement le lait tout en continuant à mélanger avec le fouet.'),
+(12, 9, 'Ajoutez le sel et le poivre, puis la muscade.'),
+(12, 10, 'Étalez les lardons sur la pâte précuite de manière harmonieuse et régulière.'),
+(12, 11, 'Versez dessus l’appareil à Quiche Lorraine.'),
+(12, 12, 'Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental râpé.'),
+(12, 13, 'Enfournez la Quiche Lorraine durant 30 minutes à 250°C.'),
+(12, 14, 'Au bout de 25 minutes, piquez avec un couteau la quiche. Si celui-ci ressort sec sans traces de crème fraîche, votre quiche est prête.'),
+(12, 15, 'Pour donner plus de craquant, n’hésitez pas à passer 5 minutes votre four en mode grill (s’il en est pourvu). Attention toutefois à ne pas brûler le dessus de votre quiche.');
+
+-- Insertion des étapes pour la recette Pâté de porc
+INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
+(13, 1, 'Hacher la poitrine et le foie, mettre le hachis dans une grande bassine, puis ajouter les œufs, le lait, le sel et le poivre, bien mélanger le tout.'),
+(13, 2, 'Prendre une fourchette de pâté et faire cuire dans une poêle, goûter et rectifier l’assaisonnement.'),
+(13, 3, 'Remplir les pots en prenant soin d’essuyer les bords avant de fermer.'),
+(13, 4, 'Faire bouillir l’eau dans la lessiveuse puis baisser le feu et cuire 3 heures.'),
+(13, 5, 'Sortir les pots le lendemain lorsqu’ils sont froids.');
 
 -- Insertion des étapes pour la recette (Foie gras à la vapeur)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(14, 1, 'Séparer les lobes du foie gras, retirer les nerfs avec la pointe d’un couteau.'),
-(14, 2, 'Assaisonner le foie gras avec le sel, le poivre blanc, le sucre, et ajouter le porto (ou cognac ou muscat).'),
-(14, 3, 'Enrouler le foie gras dans du film alimentaire, puis dans du papier d\'aluminium en serrant bien les bords.'),
-(14, 4, 'Ficeler le foie gras à l’aide de la ficelle de boucher pour maintenir une forme compacte.'),
-(14, 5, 'Faire cuire à la vapeur pendant 4 à 5 minutes pour un foie gras rosé ou à cœur.'),
-(14, 6, 'Laisser refroidir, puis réfrigérer pendant 5 jours avant de couper en tranches.');
+(14, 1, 'Important : avant de le travailler, mettre le foie au réfrigérateur. Le sortir au bout d\'une heure et le dégager de son emballage sous vide.'),
+(14, 2, 'Séparer les lobes en enlevant les nerfs avec la pointe d\'un couteau. Pratiquer quatre à cinq incisions, dans le sens de la longueur, dans chaque lobe afin d\'enlever nerfs et filets de sang au couteau.'),
+(14, 3, 'Disposer les lobes coupés en tranches dans un plat et assaisonner de sel, poivre et sucre. Terminer par la cuillerée de porto. Mélanger et laisser macérer le tout 24 heures au réfrigérateur.'),
+(14, 4, 'Le lendemain, rassembler les morceaux de foie dans un film alimentaire et les compacter de manière à former un boudin. Ne pas hésiter à doubler le film pour éviter toute fuite catastrophique.'),
+(14, 5, 'Bien papilloter et ficeler les extrémités du boudin avec de la ficelle de boucher.'),
+(14, 6, 'Enveloppé de papier d\'aluminium, le foie peut être mis à cuire quand la vapeur est bien montée : 4 minutes pour un foie un peu rosé à l\'intérieur et 5 pour une cuisson à cœur.'),
+(14, 7, 'Une fois refroidi, mettre le foie enveloppé au réfrigérateur. Pour bien le tasser, mettre un poids d\'un kilo sur une planche placée dessus.'),
+(14, 8, 'Au bout de quelques heures (cinq jours maximum), sortir le foie du réfrigérateur. Le débarrasser de son papier d\'aluminium et de son film alimentaire. Couper en tranches avec un couteau chauffé dans de l\'eau chaude.');
 
--- Insertion des étapes pour la recette (Blancs de poulet à la crème et au miel)
+-- Insertion des étapes pour la recette ID 15 (Blancs de poulet à la crème et au miel)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (15, 1, 'Coupez les blancs de poulet en petits cubes, épluchez l\'oignon et émincez-le.'),
 (15, 2, 'Faites chauffer l\'huile dans une poêle et faites-y revenir l\'oignon et les morceaux de blancs de poulet.'),
-(15, 3, 'Quand ils sont dorés, ajoutez le vinaigre et le miel, puis laissez mijoter pendant 3 minutes.'),
-(15, 4, 'Ajoutez la crème et remuez bien pour l\'incorporer.'),
+(15, 3, 'Quand ils sont dorés, ajoutez le vinaigre et le miel et laissez mijoter 3 minutes.'),
+(15, 4, 'Ajoutez la crème et remuez.'),
 (15, 5, 'Servez aussitôt accompagné de riz.');
 
-
--- Insertion des étapes pour la recette ID 16 (Escargots à la Catalane)
+-- Insertion des étapes pour la recette (Escargots à la Catalane)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (16, 1, 'Lavez à grandes eaux les escargots ayant jeûné.'),
 (16, 2, 'Retirez les opercules.'),
 (16, 3, 'Passez-les plusieurs fois dans du gros sel puis dans du vinaigre pour les faire « baver ». Rincez-les une dernière fois puis égouttez-les.'),
 (16, 4, 'Faites le court-bouillon dans une marmite contenant 2 litres d’eau et l’ensemble des ingrédients. Laissez bouillir pendant 10 minutes. Jetez-y les escargots propres. Laissez-les cuire 15 minutes dès que l’ébullition a repris. Égouttez-les.'),
-(16, 5, 'Pendant ce temps, dans une cocotte contenant de l’huile d’olive, faites revenir l’oignon coupé en morceaux, les piments épépinés et coupés très fins, le jambon, et en dernier 4 gousses d’ail hachées.'),
+(16, 5, 'Pendant ce temps, dans une cocotte contenant de l’huile d’olive, faites revenir l’oignon coupé en morceaux, les piments épépinés et coupés très fins, le jambon et en dernier 4 gousses d’ail hachées.'),
 (16, 6, 'Coupez-y les tomates pelées. Faites mijoter 5 minutes à couvert.'),
 (16, 7, 'Ajoutez le vin blanc et les escargots égouttés ; salez, poivrez et pimentez. Mélangez.'),
 (16, 8, 'Laissez cuire à feu très doux pendant 45 minutes.'),
 (16, 9, '5 minutes avant la fin de la cuisson, ajoutez 2 gousses d’ail, le persil et les amandes (les 3 ingrédients doivent être pilés ensemble).'),
 (16, 10, 'C’est prêt !!!');
 
-
--- Étapes pour Soupe chinoise
+-- Insertion des étapes pour la recette (Soupe chinoise)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(17, 1, 'Mettre le poulet dans l’eau avec les légumes coupés et le cube de bouillon pour préparer le court-bouillon.'),
-(17, 2, 'Tremper les champignons chinois et les couper en lamelles.'),
-(17, 3, 'Passer le bouillon, puis ajouter les champignons, la chair du poulet et les crevettes.'),
-(17, 4, 'Mettre les pâtes et laisser mijoter.'),
-(17, 5, 'Servir avec des oignons verts et de la coriandre hachée.');
+(17, 1, 'Mettre le poulet dans l’eau avec les légumes coupés et le cube pour faire le bouillon.'),
+(17, 2, 'Mettre à tremper les champignons chinois puis ensuite les couper en lamelles.'),
+(17, 3, 'Passer le bouillon puis y rajouter les champignons, la chair du poulet et les crevettes.'),
+(17, 4, 'Mettre les pâtes.'),
+(17, 5, 'Servir avec oignons verts, coriandre, omelette, nuoc-mâm, etc.');
 
--- Étapes pour Foie gras au muscat
+-- Insertion des étapes pour la recette (Foie gras au muscat)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(18, 1, 'Séparer les lobes du foie gras, retirer les nerfs avec la pointe d’un couteau.'),
-(18, 2, 'Disposer les lobes dans un plat, assaisonner de sel, poivre, sucre et porter au réfrigérateur pendant 24 heures.'),
-(18, 3, 'Enrouler le foie gras dans du film plastique et ficeler les bords.'),
-(18, 4, 'Cuire à la vapeur pendant 4 à 5 minutes pour un foie rosé ou à cœur.'),
-(18, 5, 'Laisser refroidir, puis réfrigérer pendant 5 jours avant de couper en tranches.');
+(18, 1, 'Séparer les 2 lobes et tirer les vaisseaux.'),
+(18, 2, 'Mettre dans un récipient de la grandeur du foie. Recouvrir de muscat et rajouter une petite poignée de sel et un peu de 5 baies (le creux de la main).'),
+(18, 3, 'Remettre au réfrigérateur pour 5 à 6 heures et le tourner plusieurs fois.'),
+(18, 4, 'Le sortir, l\'éponger et le mettre dans un film plastique. Le rouler en forme de boudin.');
 
--- Étapes pour Chorba
+-- Insertion des étapes pour la recette (Chorba)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(19, 1, 'Laver les escargots et les cuire 1 heure dans de l’eau bouillante salée avec le bouquet garni et la branche de fenouil sauvage.'),
-(19, 2, 'Ébouillanter les tomates, enlever la peau et les pépins, puis concasser les tomates.'),
-(19, 3, 'Faire revenir les tomates, les échalotes et l’ail avec de la graisse d’oie.'),
-(19, 4, 'Ajouter la chair à saucisse, la couenne de porc et le talon de jambon haché, puis faire cuire 10 minutes.'),
-(19, 5, 'Incorporer les escargots et 1 litre de bouillon, laisser mijoter pendant 1 heure.');
+(19, 1, 'Faire revenir la viande dans l\'huile avec un morceau de beurre. Une fois bien dorée, retirer la viande puis rajouter les oignons coupés en petits morceaux.'),
+(19, 2, 'Laisser dorer et ajouter un bol d\'eau. Lorsque les oignons sont cuits, rajouter le persil haché et le coriandre haché.'),
+(19, 3, 'Écraser le tout avec une fourchette et ajouter les épices, le colorant, sel et poivre ainsi que le concentré de tomate.'),
+(19, 4, 'Remettre la viande et laisser cuire 45 minutes environ en remuant de temps en temps.'),
+(19, 5, 'Ajouter le bol de langues d\'oiseaux et laisser mijoter encore 20 minutes.'),
+(19, 6, 'Si recette avec merguez, les mettre en même temps que les langues d\'oiseaux.');
 
--- Insertion des étapes pour les Cagouilles à la Charentaise
+-- Insertion des étapes pour la recette (Cagouilles à la Charentaise)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (20, 1, 'Lavez les escargots 3 fois avec un peu de vinaigre et de gros sel pour les faire dégorger.'),
 (20, 2, 'Cuisez-les 1 heure dans de l’eau bouillante salée avec le bouquet garni et la branche de fenouil sauvage, puis égouttez-les. Réservez 1 litre du bouillon de cuisson.'),
@@ -476,35 +481,36 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (20, 4, 'Ciselez les échalotes, hachez les gousses d’ail.'),
 (20, 5, 'Dans une cocotte, faites revenir les tomates, les échalotes et les gousses d’ail avec la graisse d’oie, ajoutez la chair à saucisse, la couenne de porc et le talon de jambon haché.'),
 (20, 6, 'Finissez avec le concentré de tomate.'),
-(20, 7, 'Faites cuire le tout 10 minutes, incorporez les escargots en coquille et 1 litre du bouillon de cuisson. Remuez délicatement et remettez sur le feu 1 heure à couvert.'),
-(20, 8, 'Juste avant de servir, parsemez du persil haché et assaisonnez.');
+(20, 7, 'Faites cuire le tout pendant 10 minutes, incorporez les escargots en coquille et 1 litre du bouillon de cuisson.'),
+(20, 8, 'Remuez délicatement et remettez sur le feu 1 heure à couvert.'),
+(20, 9, 'Juste avant de servir, parsemez du persil haché et assaisonnez.');
 
--- Étapes pour Tiramisu
+-- Insertion des étapes pour la recette (Tiramisu)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(21, 1, 'Séparer les blancs des jaunes. Mélanger les jaunes avec le sucre et le mascarpone.'),
-(21, 2, 'Monter les blancs en neige et les incorporer délicatement au mélange.'),
-(21, 3, 'Tremper les biscuits dans le café et les disposer dans un plat.'),
-(21, 4, 'Alterner une couche de biscuits et une couche de crème.'),
-(21, 5, 'Saupoudrer de cacao amer et laisser reposer au réfrigérateur au moins 4 heures.');
+(21, 1, 'Séparer les blancs des jaunes. Mélanger les jaunes, le sucre et le sucre vanillé. Ajouter le mascarpone au fouet.'),
+(21, 2, 'Monter les blancs en neige et les incorporer délicatement à la spatule au mélange précédent.'),
+(21, 3, 'Préparer du café noir.'),
+(21, 4, 'Mouiller les biscuits dans le café.'),
+(21, 5, 'Tapisser le fond du moule avec les biscuits. Recouvrir d\'une couche de crème, œuf, sucre, mascarpone.'),
+(21, 6, 'Alterner biscuits et crème.'),
+(21, 7, 'Terminer par une couche de crème. Saupoudrer de cacao.'),
+(21, 8, 'Mettre au réfrigérateur 4 heures minimum.');
 
--- Étapes pour Madeleine au miel
+-- Insertion des étapes pour la recette (Madeleine au miel)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(22, 1, 'Fouetter les œufs, le sucre et le miel jusqu’à ce que le mélange blanchisse.'),
-(22, 2, 'Ajouter la farine, la levure, le beurre fondu, le zeste de citron et une pincée de sel.'),
-(22, 3, 'Bien mélanger jusqu’à obtenir une pâte lisse.'),
-(22, 4, 'Beurrer les moules à madeleine et les remplir à moitié avec la pâte.'),
-(22, 5, 'Enfourner à 180°C (thermostat 6) pendant 10 à 15 minutes.');
+(22, 1, 'Allumer le four thermostat 7-8.'),
+(22, 2, 'Fouettez à la main les œufs, le sucre et le miel, jusqu\'à ce que le mélange blanchisse.'),
+(22, 3, 'Ajouter alors la farine, le sel, la levure, le beurre fondu et le zeste du citron. Bien mélanger.'),
+(22, 4, 'Beurrer les moules et les remplir à moitié avec la préparation.'),
+(22, 5, 'Enfourner 5 à 10 minutes, jusqu\'à ce que les madeleines soient dorées.');
 
--- Étapes pour Tagliatelles de concombre au saumon fumé
+-- Insertion des étapes pour la recette (Tagliatelles de concombre au saumon fumé)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(23, 1, 'Éplucher les concombres et les couper en fines lanières.'),
-(23, 2, 'Couper le saumon fumé en petites lanières.'),
-(23, 3, 'Dans un bol, mélanger la crème fraîche, la moutarde, le sel, le poivre et le jus de citron.'),
-(23, 4, 'Ajouter les lanières de concombre et de saumon fumé à la sauce et mélanger.'),
-(23, 5, 'Réserver au frais pendant une heure avant de servir.');
-
-
-
+(23, 1, 'À l\'aide d\'un économe, éplucher en longueur les concombres afin de faire des lanières.'),
+(23, 2, 'Pour faire la sauce : Incorporer dans la crème fraîche la moutarde, la ciboulette, le sel, le poivre et le jus de citron. Mélanger le tout.'),
+(23, 3, 'Faire des petites lanières de saumon fumé.'),
+(23, 4, 'Dans un saladier, mélanger les tagliatelles de concombre, le saumon et la sauce à la crème fraîche.'),
+(23, 5, 'Réserver au frais pendant une heure.');
 
 -- Insertion des employés (tous les rôles sont couverts)
 INSERT INTO Employes (NomEmploye, Role, Salaire, HoraireEmploye, SecteurID)
