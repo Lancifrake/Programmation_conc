@@ -1,140 +1,139 @@
 -- Création de la base de données
-CREATE DATABASE RestaurantManagement;
-USE RestaurantManagement;
+-- SQLite crée automatiquement une base de données dans un fichier, pas besoin de la déclaration CREATE DATABASE.
 
 -- Table pour les catégories de recettes
-CREATE TABLE CategoriesRecettes (
-    CategorieID INT AUTO_INCREMENT PRIMARY KEY,
-    NomCategorie VARCHAR(100) NOT NULL -- Exemple : Entrée, Plat, Dessert
+CREATE TABLE IF NOT EXISTS CategoriesRecettes (
+    CategorieID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomCategorie TEXT NOT NULL -- Exemple : Entrée, Plat, Dessert
 );
 
 -- Table pour les recettes
-CREATE TABLE Recettes (
-    RecetteID INT AUTO_INCREMENT PRIMARY KEY,
-    NomRecette VARCHAR(100) NOT NULL,
-    CategorieID INT NOT NULL, -- Lien vers la catégorie
-    NombrePersonnes INT ,
-    TempsPreparation TIME , -- Temps de préparation en heures:minutes:secondes
-    TempsCuisson TIME,
-    TempsRepos TIME,
+CREATE TABLE IF NOT EXISTS Recettes (
+    RecetteID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomRecette TEXT NOT NULL,
+    CategorieID INTEGER NOT NULL, -- Lien vers la catégorie
+    NombrePersonnes INTEGER,
+    TempsPreparation TEXT, -- Temps de préparation en heures:minutes:secondes
+    TempsCuisson TEXT,
+    TempsRepos TEXT,
     FOREIGN KEY (CategorieID) REFERENCES CategoriesRecettes(CategorieID)
 );
 
 -- Table pour les ingrédients des recettes
-CREATE TABLE IngredientsRecettes (
-    IngredientID INT AUTO_INCREMENT PRIMARY KEY,
-    RecetteID INT NOT NULL, -- Lien vers la recette
-    NomIngredient VARCHAR(100) NOT NULL,
-    Quantite VARCHAR(50), -- Exemple : "200g", "2 cuillères"
+CREATE TABLE IF NOT EXISTS IngredientsRecettes (
+    IngredientID INTEGER PRIMARY KEY AUTOINCREMENT,
+    RecetteID INTEGER NOT NULL, -- Lien vers la recette
+    NomIngredient TEXT NOT NULL,
+    Quantite TEXT, -- Exemple : "200g", "2 cuillères"
     FOREIGN KEY (RecetteID) REFERENCES Recettes(RecetteID)
 );
 
 -- Table pour les étapes des recettes
-CREATE TABLE EtapesRecettes (
-    EtapeID INT AUTO_INCREMENT PRIMARY KEY,
-    RecetteID INT NOT NULL, -- Lien vers la recette
-    OrdreEtape INT NOT NULL, -- Numéro de l'étape
+CREATE TABLE IF NOT EXISTS EtapesRecettes (
+    EtapeID INTEGER PRIMARY KEY AUTOINCREMENT,
+    RecetteID INTEGER NOT NULL, -- Lien vers la recette
+    OrdreEtape INTEGER NOT NULL, -- Numéro de l'étape
     DescriptionEtape TEXT NOT NULL, -- Description détaillée de l'étape
     FOREIGN KEY (RecetteID) REFERENCES Recettes(RecetteID)
 );
 
 -- Table pour les employés
-CREATE TABLE Employes (
-    EmployeID INT AUTO_INCREMENT PRIMARY KEY,
-    NomEmploye VARCHAR(100) NOT NULL,
-    Role ENUM('MaitreHotel', 'ChefRang', 'Serveur', 'CommisSalle', 'ChefCuisine', 'ChefPartie', 'CommisCuisine', 'Plongeur') NOT NULL,
-    Salaire DECIMAL(10, 2),
-    HoraireEmploye ENUM('Matin', 'Soir'),
-    SecteurID INT ,
+CREATE TABLE IF NOT EXISTS Employes (
+    EmployeID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomEmploye TEXT NOT NULL,
+    Role TEXT CHECK(Role IN ('MaitreHotel', 'ChefRang', 'Serveur', 'CommisSalle', 'ChefCuisine', 'ChefPartie', 'CommisCuisine', 'Plongeur')) NOT NULL,
+    Salaire REAL,
+    HoraireEmploye TEXT CHECK(HoraireEmploye IN ('Matin', 'Soir')),
+    SecteurID INTEGER,
     FOREIGN KEY (SecteurID) REFERENCES Secteurs(SecteurID)
 );
 
 -- Table pour les secteurs (carrés) dans la salle
-CREATE TABLE Secteurs (
-    SecteurID INT AUTO_INCREMENT PRIMARY KEY,
-    NomSecteur VARCHAR(50),
-    NombreDeTables INT
+CREATE TABLE IF NOT EXISTS Secteurs (
+    SecteurID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomSecteur TEXT,
+    NombreDeTables INTEGER
 );
 
 -- Table pour les tables
-CREATE TABLE Tables (
-    TableID INT AUTO_INCREMENT PRIMARY KEY,
-    Capacite INT NOT NULL,
-    SecteurID INT NOT NULL,
-    Statut ENUM('Libre', 'Occupée', 'Réservée') DEFAULT 'Libre',
+CREATE TABLE IF NOT EXISTS Tables (
+    TableID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Capacite INTEGER NOT NULL,
+    SecteurID INTEGER NOT NULL,
+    Statut TEXT CHECK(Statut IN ('Libre', 'Occupée', 'Réservée')) DEFAULT 'Libre',
     FOREIGN KEY (SecteurID) REFERENCES Secteurs(SecteurID)
 );
 
 -- Table pour les clients
-CREATE TABLE Clients (
-    ClientID INT AUTO_INCREMENT PRIMARY KEY,
-    NomClient VARCHAR(100),
-    ReservationID INT NOT NULL,
+CREATE TABLE IF NOT EXISTS Clients (
+    ClientID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomClient TEXT,
+    ReservationID INTEGER NOT NULL,
     FOREIGN KEY (ReservationID) REFERENCES Reservations(ReservationID)
 );
 
 -- Table pour les réservations
-CREATE TABLE Reservations (
-    ReservationID INT AUTO_INCREMENT PRIMARY KEY,
-    NomClient VARCHAR(100) NOT NULL,
-    DateReservation DATE NOT NULL,
-    HeureReservation TIME NOT NULL,
-    NombrePersonnes INT NOT NULL,
-    TableID INT NOT NULL,
+CREATE TABLE IF NOT EXISTS Reservations (
+    ReservationID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomClient TEXT NOT NULL,
+    DateReservation TEXT NOT NULL, -- SQLite n'a pas de type DATE natif
+    HeureReservation TEXT NOT NULL, -- SQLite n'a pas de type TIME natif
+    NombrePersonnes INTEGER NOT NULL,
+    TableID INTEGER NOT NULL,
     FOREIGN KEY (TableID) REFERENCES Tables(TableID)
 );
 
 -- Table pour les stocks
-CREATE TABLE Inventaire (
-    ProduitID INT AUTO_INCREMENT PRIMARY KEY,
-    NomProduit VARCHAR(100) NOT NULL,
-    Categorie ENUM('Surgelé', 'Frais', 'LongueConservation') NOT NULL,
-    Quantite INT NOT NULL,
-    DateExpiration DATE
+CREATE TABLE IF NOT EXISTS Inventaire (
+    ProduitID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomProduit TEXT NOT NULL,
+    Categorie TEXT CHECK(Categorie IN ('Surgelé', 'Frais', 'LongueConservation')) NOT NULL,
+    Quantite INTEGER NOT NULL,
+    DateExpiration TEXT -- SQLite n'a pas de type DATE natif
 );
 
 -- Table pour les commandes
-CREATE TABLE Commandes (
-    CommandeID INT AUTO_INCREMENT PRIMARY KEY,
-    TableID INT NOT NULL,
-    HeureCommande DATETIME NOT NULL,
-    Statut ENUM('EnAttente', 'EnPréparation', 'Servie') DEFAULT 'EnAttente',
+CREATE TABLE IF NOT EXISTS Commandes (
+    CommandeID INTEGER PRIMARY KEY AUTOINCREMENT,
+    TableID INTEGER NOT NULL,
+    HeureCommande TEXT NOT NULL, -- Utilisation du format DATETIME ou TEXT
+    Statut TEXT CHECK(Statut IN ('EnAttente', 'EnPréparation', 'Servie')) DEFAULT 'EnAttente',
     FOREIGN KEY (TableID) REFERENCES Tables(TableID)
 );
 
 -- Table pour les plats dans les commandes
-CREATE TABLE DetailsCommandes (
-    DetailsID INT AUTO_INCREMENT PRIMARY KEY,
-    CommandeID INT NOT NULL,
-    RecetteID INT NOT NULL),
-    NombrePlats INT,
+CREATE TABLE IF NOT EXISTS DetailsCommandes (
+    DetailsID INTEGER PRIMARY KEY AUTOINCREMENT,
+    CommandeID INTEGER NOT NULL,
+    RecetteID INTEGER NOT NULL,
+    NombrePlats INTEGER,
     FOREIGN KEY (CommandeID) REFERENCES Commandes(CommandeID),
     FOREIGN KEY (RecetteID) REFERENCES Recettes(RecetteID)
 );
 
 -- Table pour les équipements
-CREATE TABLE Equipements (
-    EquipementID INT AUTO_INCREMENT PRIMARY KEY,
-    NomEquipement VARCHAR(100) NOT NULL,
-    Quantite INT,
-    Localisation ENUM('Cuisine', 'Salle') NOT NULL
+CREATE TABLE IF NOT EXISTS Equipements (
+    EquipementID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NomEquipement TEXT NOT NULL,
+    Quantite INTEGER,
+    Localisation TEXT CHECK(Localisation IN ('Cuisine', 'Salle')) NOT NULL
 );
 
 -- Suivi des tâches (logs des flux d'activités)
-CREATE TABLE LogsTaches (
-    TacheID INT AUTO_INCREMENT PRIMARY KEY,
-    EmployeID INT NOT NULL,
+CREATE TABLE IF NOT EXISTS LogsTaches (
+    TacheID INTEGER PRIMARY KEY AUTOINCREMENT,
+    EmployeID INTEGER NOT NULL,
     Description TEXT, -- Détail de la tâche effectuée
-    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, -- Horodatage automatique
+    Timestamp TEXT DEFAULT (DATETIME('now')), -- Horodatage automatique
     FOREIGN KEY (EmployeID) REFERENCES Employes(EmployeID)
 );
 
 -- Table pour les ingrédients (relier recettes et stocks)
-CREATE TABLE IngredientsInventaire (
-    IngredientID INT AUTO_INCREMENT PRIMARY KEY,
-    RecetteID INT NOT NULL,
-    ProduitID INT NOT NULL, -- Lien vers la table Inventaire
-    Quantite INT NOT NULL, -- Quantité nécessaire par préparation
+CREATE TABLE IF NOT EXISTS IngredientsInventaire (
+    IngredientID INTEGER PRIMARY KEY AUTOINCREMENT,
+    RecetteID INTEGER NOT NULL,
+    ProduitID INTEGER NOT NULL, -- Lien vers la table Inventaire
+    Quantite INTEGER NOT NULL, -- Quantité nécessaire par préparation
     FOREIGN KEY (RecetteID) REFERENCES Recettes(RecetteID),
     FOREIGN KEY (ProduitID) REFERENCES Inventaire(ProduitID)
 );
