@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 -- Insertion des catégories de recettes
 INSERT INTO CategoriesRecettes (NomCategorie)
 VALUES 
@@ -32,7 +34,6 @@ INSERT INTO Recettes (NomRecette, CategorieID, NombrePersonnes, TempsPreparation
 ('Tagliatelles de concombre au saumon fumé', 1, 4, '00:20:00', NULL, NULL);
 
 -- Insertion des ingrédients pour les recettes
-
 -- Ingrédients pour Feuilleté au crabe
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (1, 'Pâte feuilletée', '300g'),
@@ -46,7 +47,7 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (1, 'Persil haché', '3 c à soupe'),
 (1, 'Piment de Cayenne', '1 pointe de couteau');
 
--- Ingrédients pour Oeufs cocotte
+-- Ingrédients pour Œufs cocotte
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (2, 'Œuf par personne', '1'),
 (2, 'Sachet de gruyère râpé', '1 sachet'),
@@ -105,7 +106,7 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (6, 'Oignons', '1'),
 (6, 'Concombre', '1'),
 (6, 'Pain rassis', '1'),
-(6, 'Huile d\'olive', '1'),
+(6, 'Huile d''olive', '1'),
 (6, 'Vinaigre', '1'),
 (6, 'Poivron', '1'),
 (6, 'Sel', '1'),
@@ -173,7 +174,7 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (14, 'Porto (ou cognac ou muscat)', '1 c à soupe'),
 (14, 'Film alimentaire', '1'),
-(14, 'Papier d\'aluminium', '1'),
+(14, 'Papier d''aluminium', '1'),
 (14, 'Ficelle de boucher', '1'),
 (14, 'Appareil de cuisson à la vapeur', '1'),
 (14, 'Foie gras cru', '5-600 g'),
@@ -188,13 +189,13 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (15, 'Vinaigre balsamique', '2 c à soupe'),
 (15, 'Miel', '1 c à soupe'),
 (15, 'Crème fraîche', '3 c à soupe'),
-(15, 'Huile d\'olive', '2 c à soupe');
+(15, 'Huile d''olive', '2 c à soupe');
 
 -- Insertion des ingrédients pour la recette (Escargots à la Catalane)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (16, 'Poireau', '1'),
-(16, 'Oignon piqué d\'un clou de girofle', '1'),
-(16, 'Gousse d\'ail', '1'),
+(16, 'Oignon piqué d''un clou de girofle', '1'),
+(16, 'Gousse d''ail', '1'),
 (16, 'Thym', '1'),
 (16, 'Céleri', '1'),
 (16, 'Feuille de laurier', '1'),
@@ -204,12 +205,12 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (16, 'Gros oignon', '1'),
 (16, 'Piments verts doux', '2'),
 (16, 'Tomates', '2'),
-(16, 'Gousses d\'ail', '6'),
+(16, 'Gousses d''ail', '6'),
 (16, 'Persil', '1'),
 (16, 'Thym (pour sauce)', '1'),
 (16, 'Amandes', '100 g'),
 (16, 'Vin blanc sec', '1 verre'),
-(16, 'Huile d\'olive', '1'),
+(16, 'Huile d''olive', '1'),
 (16, 'Sel (pour sauce)', '1'),
 (16, 'Poivre (pour sauce)', '1'),
 (16, 'Pointe de piment fort', '1');
@@ -237,10 +238,10 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 
 -- Insertion des ingrédients pour la recette (Chorba)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
-(19, 'Huile d\'olive', '1'),
+(19, 'Huile d''olive', '1'),
 (19, 'Beurre', '1'),
 (19, 'Gros oignons', '3'),
-(19, 'Langues d\'oiseaux', '1 bol'),
+(19, 'Langues d''oiseaux', '1 bol'),
 (19, 'Concentré de tomates', '1 boîte'),
 (19, 'Persil', '1'),
 (19, 'Épices raz el amout', '1'),
@@ -258,15 +259,15 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (20, 'Couenne de porc', '100 g'),
 (20, 'Échalotes', '4'),
 (20, 'Tomates', '4'),
-(20, 'Gousses d\'ail', '4'),
+(20, 'Gousses d''ail', '4'),
 (20, 'Concentré de tomate', '1 c à soupe'),
-(20, 'Graisse d\'oie', '1 c à soupe'),
+(20, 'Graisse d''oie', '1 c à soupe'),
 (20, 'Persil plat', '1 botte'),
 (20, 'Bouquet garni', '1 bouquet'),
 (20, 'Fenouil sauvage', '1 branche'),
 (20, 'Vinaigre blanc', '1 verre'),
 (20, 'Gros sel', '1 poignée'),
-(20, 'Poivre du moulin','4');
+(20, 'Poivre du moulin', '4');
 
 -- Insertion des ingrédients pour la recette (Tiramisu)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -277,7 +278,6 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (21, 'Biscuits à la cuillère', '24'),
 (21, 'Café noir non sucré', '1/2 litre'),
 (21, 'Poudre de cacao amer', '30 g');
-
 
 -- Insertion des ingrédients pour la recette (Madeleine au miel)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
@@ -290,7 +290,6 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (22, 'Citron non traité', '1'),
 (22, 'Sel', '1 pincée');
 
-
 -- Insertion des ingrédients pour la recette (Tagliatelles de concombre au saumon fumé)
 INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (23, 'Concombres', '2'),
@@ -302,8 +301,6 @@ INSERT INTO IngredientsRecettes (RecetteID, NomIngredient, Quantite) VALUES
 (23, 'Sel', '1'),
 (23, 'Poivre', '1');
 
-
-
 -- Insertion des étapes pour les recettes
 
 -- Étapes pour Feuilleté au crabe
@@ -312,7 +309,7 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (1, 2, 'Mélanger la chair de crabe, le jus de citron, la chapelure, les herbes et le piment'),
 (1, 3, 'Lier le tout avec un œuf'),
 (1, 4, 'Découper 4 disques dans la pâte feuilletée et répartir la farce sur la moitié de chaque disque, en laissant 1 cm de rebord'),
-(1, 5, 'Rabattre l\'autre moitié et souder'),
+(1, 5, 'Rabattre l''autre moitié et souder'),
 (1, 6, 'Badigeonner les feuilletés avec un œuf battu et salé, puis strier avec une fourchette'),
 (1, 7, 'Mettre au four à 180° (th 6) pendant 20mn minimum');
 
@@ -320,7 +317,7 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (2, 1, 'Séparer les blancs des jaunes et laisser ces derniers dans une demi-coquille'),
 (2, 2, 'Monter les blancs en neige et incorporer un sachet de râpé'),
-(2, 3, 'Mettre cette préparation dans un ramequin et faites un trou pour y loger un jaune d\'œuf'),
+(2, 3, 'Mettre cette préparation dans un ramequin et faites un trou pour y loger un jaune d''œuf'),
 (2, 4, 'Rajouter un peu de crème fraîche sur le jaune, poivrer et saler'),
 (2, 5, 'Enfourner 5 minutes à four chaud (surveiller la cuisson)');
 
@@ -345,24 +342,14 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 
 -- Étapes pour Blanquettes de veau
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(5, 1, 'Faire chauffer une grande casserole avec de l\'huile ou du beurre et y faire revenir la viande de veau coupée en morceaux.'),
+(5, 1, 'Faire chauffer une grande casserole avec de l''huile ou du beurre et y faire revenir la viande de veau coupée en morceaux.'),
 (5, 2, 'Ajouter les oignons et les carottes coupées en rondelles, puis faire dorer légèrement le tout.'),
-(5, 3, 'Ajouter le vin blanc et un bouquet garni (thym, laurier, etc.), couvrir d\'eau et laisser mijoter pendant environ 1h30 à feu doux.'),
+(5, 3, 'Ajouter le vin blanc et un bouquet garni (thym, laurier, etc.), couvrir d''eau et laisser mijoter pendant environ 1h30 à feu doux.'),
 (5, 4, 'Retirer la viande et les légumes de la casserole, puis passer le bouillon pour le filtrer.'),
 (5, 5, 'Dans une casserole, faire fondre du beurre, ajouter de la farine pour préparer un roux, puis verser petit à petit le bouillon filtré en fouettant pour éviter les grumeaux.'),
-(5, 6, 'Laisser épaissir la sauce à feu doux et ajouter la crème fraîche et le jaune d\'œuf pour lier le tout.'),
+(5, 6, 'Laisser épaissir la sauce à feu doux et ajouter la crème fraîche et le jaune d''œuf pour lier le tout.'),
 (5, 7, 'Remettre la viande et les légumes dans la sauce, mélanger doucement et laisser cuire encore 10 à 15 minutes à feu doux.'),
 (5, 8, 'Servir la blanquette de veau bien chaude, accompagnée de riz ou de pommes de terre vapeur.');
-
--- Étapes pour le gaspatcho
-INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(6, 1, 'Laver et éplucher les tomates, le concombre, le poivron et l\'oignon. Couper tous les légumes en morceaux.'),
-(6, 2, 'Éplucher l\'ail et retirer le germe. Si le pain de mie est trop dur, le tremper dans un peu d\'eau pour le ramollir.'),
-(6, 3, 'Mettre tous les légumes, l\'ail, le pain de mie dans un mixeur, ajouter le vinaigre, l\'huile d\'olive, le sel et le poivre. Mixer jusqu\'à obtention d\'une consistance lisse.'),
-(6, 4, 'Ajouter progressivement de l\'eau froide en fonction de la consistance désirée (si vous préférez un gazpacho plus liquide, ajoutez plus d\'eau).'),
-(6, 5, 'Goûter et ajuster l\'assaisonnement si nécessaire, puis passer le gazpacho dans une passoire fine ou un chinois pour éliminer les morceaux.'),
-(6, 6, 'Réfrigérer pendant au moins 2 heures avant de servir pour que la soupe soit bien froide.'),
-(6, 7, 'Servir dans des bols ou des verres avec un filet d\'huile d\'olive et des croûtons si souhaité.');
 
 -- Étapes pour Gaufres
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
@@ -386,9 +373,9 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (11, 1, 'Étaler la pâte dans un moule.'),
 (11, 2, 'Faire fondre le beurre, y ajouter la farine et le lait petit à petit.'),
-(11, 3, 'Bien mélanger à l\'aide d\'un fouet jusqu\'à épaississement, saler et poivrer.'),
+(11, 3, 'Bien mélanger à l''aide d''un fouet jusqu''à épaississement, saler et poivrer.'),
 (11, 4, 'Égoutter le thon et les champignons puis les ajouter à la béchamelle.'),
-(11, 5, 'Mettre l\'appareil sur la pâte et parsemer de gruyère râpé.'),
+(11, 5, 'Mettre l''appareil sur la pâte et parsemer de gruyère râpé.'),
 (11, 6, 'Mettre au four pendant 20 minutes.');
 
 -- Insertion des étapes pour la recette (Quiche Lorraine)
@@ -419,19 +406,19 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 
 -- Insertion des étapes pour la recette (Foie gras à la vapeur)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(14, 1, 'Important : avant de le travailler, mettre le foie au réfrigérateur. Le sortir au bout d\'une heure et le dégager de son emballage sous vide.'),
-(14, 2, 'Séparer les lobes en enlevant les nerfs avec la pointe d\'un couteau. Pratiquer quatre à cinq incisions, dans le sens de la longueur, dans chaque lobe afin d\'enlever nerfs et filets de sang au couteau.'),
+(14, 1, 'Important : avant de le travailler, mettre le foie au réfrigérateur. Le sortir au bout d''une heure et le dégager de son emballage sous vide.'),
+(14, 2, 'Séparer les lobes en enlevant les nerfs avec la pointe d''un couteau. Pratiquer quatre à cinq incisions, dans le sens de la longueur, dans chaque lobe afin d''enlever nerfs et filets de sang au couteau.'),
 (14, 3, 'Disposer les lobes coupés en tranches dans un plat et assaisonner de sel, poivre et sucre. Terminer par la cuillerée de porto. Mélanger et laisser macérer le tout 24 heures au réfrigérateur.'),
 (14, 4, 'Le lendemain, rassembler les morceaux de foie dans un film alimentaire et les compacter de manière à former un boudin. Ne pas hésiter à doubler le film pour éviter toute fuite catastrophique.'),
 (14, 5, 'Bien papilloter et ficeler les extrémités du boudin avec de la ficelle de boucher.'),
-(14, 6, 'Enveloppé de papier d\'aluminium, le foie peut être mis à cuire quand la vapeur est bien montée : 4 minutes pour un foie un peu rosé à l\'intérieur et 5 pour une cuisson à cœur.'),
-(14, 7, 'Une fois refroidi, mettre le foie enveloppé au réfrigérateur. Pour bien le tasser, mettre un poids d\'un kilo sur une planche placée dessus.'),
-(14, 8, 'Au bout de quelques heures (cinq jours maximum), sortir le foie du réfrigérateur. Le débarrasser de son papier d\'aluminium et de son film alimentaire. Couper en tranches avec un couteau chauffé dans de l\'eau chaude.');
+(14, 6, 'Enveloppé de papier d''aluminium, le foie peut être mis à cuire quand la vapeur est bien montée : 4 minutes pour un foie un peu rosé à l''intérieur et 5 pour une cuisson à cœur.'),
+(14, 7, 'Une fois refroidi, mettre le foie enveloppé au réfrigérateur. Pour bien le tasser, mettre un poids d''un kilo sur une planche placée dessus.'),
+(14, 8, 'Au bout de quelques heures (cinq jours maximum), sortir le foie du réfrigérateur. Le débarrasser de son papier d''aluminium et de son film alimentaire. Couper en tranches avec un couteau chauffé dans de l''eau chaude.');
 
 -- Insertion des étapes pour la recette ID 15 (Blancs de poulet à la crème et au miel)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(15, 1, 'Coupez les blancs de poulet en petits cubes, épluchez l\'oignon et émincez-le.'),
-(15, 2, 'Faites chauffer l\'huile dans une poêle et faites-y revenir l\'oignon et les morceaux de blancs de poulet.'),
+(15, 1, 'Coupez les blancs de poulet en petits cubes, épluchez l''oignon et émincez-le.'),
+(15, 2, 'Faites chauffer l''huile dans une poêle et faites-y revenir l''oignon et les morceaux de blancs de poulet.'),
 (15, 3, 'Quand ils sont dorés, ajoutez le vinaigre et le miel et laissez mijoter 3 minutes.'),
 (15, 4, 'Ajoutez la crème et remuez.'),
 (15, 5, 'Servez aussitôt accompagné de riz.');
@@ -462,16 +449,16 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (18, 1, 'Séparer les 2 lobes et tirer les vaisseaux.'),
 (18, 2, 'Mettre dans un récipient de la grandeur du foie. Recouvrir de muscat et rajouter une petite poignée de sel et un peu de 5 baies (le creux de la main).'),
 (18, 3, 'Remettre au réfrigérateur pour 5 à 6 heures et le tourner plusieurs fois.'),
-(18, 4, 'Le sortir, l\'éponger et le mettre dans un film plastique. Le rouler en forme de boudin.');
+(18, 4, 'Le sortir, l''éponger et le mettre dans un film plastique. Le rouler en forme de boudin.');
 
 -- Insertion des étapes pour la recette (Chorba)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(19, 1, 'Faire revenir la viande dans l\'huile avec un morceau de beurre. Une fois bien dorée, retirer la viande puis rajouter les oignons coupés en petits morceaux.'),
-(19, 2, 'Laisser dorer et ajouter un bol d\'eau. Lorsque les oignons sont cuits, rajouter le persil haché et le coriandre haché.'),
+(19, 1, 'Faire revenir la viande dans l''huile avec un morceau de beurre. Une fois bien dorée, retirer la viande puis rajouter les oignons coupés en petits morceaux.'),
+(19, 2, 'Laisser dorer et ajouter un bol d''eau. Lorsque les oignons sont cuits, rajouter le persil haché et le coriandre haché.'),
 (19, 3, 'Écraser le tout avec une fourchette et ajouter les épices, le colorant, sel et poivre ainsi que le concentré de tomate.'),
 (19, 4, 'Remettre la viande et laisser cuire 45 minutes environ en remuant de temps en temps.'),
-(19, 5, 'Ajouter le bol de langues d\'oiseaux et laisser mijoter encore 20 minutes.'),
-(19, 6, 'Si recette avec merguez, les mettre en même temps que les langues d\'oiseaux.');
+(19, 5, 'Ajouter le bol de langues d''oiseaux et laisser mijoter encore 20 minutes.'),
+(19, 6, 'Si recette avec merguez, les mettre en même temps que les langues d''oiseaux.');
 
 -- Insertion des étapes pour la recette (Cagouilles à la Charentaise)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
@@ -491,7 +478,7 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (21, 2, 'Monter les blancs en neige et les incorporer délicatement à la spatule au mélange précédent.'),
 (21, 3, 'Préparer du café noir.'),
 (21, 4, 'Mouiller les biscuits dans le café.'),
-(21, 5, 'Tapisser le fond du moule avec les biscuits. Recouvrir d\'une couche de crème, œuf, sucre, mascarpone.'),
+(21, 5, 'Tapisser le fond du moule avec les biscuits. Recouvrir d''une couche de crème, œuf, sucre, mascarpone.'),
 (21, 6, 'Alterner biscuits et crème.'),
 (21, 7, 'Terminer par une couche de crème. Saupoudrer de cacao.'),
 (21, 8, 'Mettre au réfrigérateur 4 heures minimum.');
@@ -499,18 +486,24 @@ INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 -- Insertion des étapes pour la recette (Madeleine au miel)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
 (22, 1, 'Allumer le four thermostat 7-8.'),
-(22, 2, 'Fouettez à la main les œufs, le sucre et le miel, jusqu\'à ce que le mélange blanchisse.'),
+(22, 2, 'Fouettez à la main les œufs, le sucre et le miel, jusqu''à ce que le mélange blanchisse.'),
 (22, 3, 'Ajouter alors la farine, le sel, la levure, le beurre fondu et le zeste du citron. Bien mélanger.'),
 (22, 4, 'Beurrer les moules et les remplir à moitié avec la préparation.'),
-(22, 5, 'Enfourner 5 à 10 minutes, jusqu\'à ce que les madeleines soient dorées.');
+(22, 5, 'Enfourner 5 à 10 minutes, jusqu''à ce que les madeleines soient dorées.');
 
 -- Insertion des étapes pour la recette (Tagliatelles de concombre au saumon fumé)
 INSERT INTO EtapesRecettes (RecetteID, OrdreEtape, DescriptionEtape) VALUES
-(23, 1, 'À l\'aide d\'un économe, éplucher en longueur les concombres afin de faire des lanières.'),
+(23, 1, 'À l''aide d''un économe, éplucher en longueur les concombres afin de faire des lanières.'),
 (23, 2, 'Pour faire la sauce : Incorporer dans la crème fraîche la moutarde, la ciboulette, le sel, le poivre et le jus de citron. Mélanger le tout.'),
 (23, 3, 'Faire des petites lanières de saumon fumé.'),
 (23, 4, 'Dans un saladier, mélanger les tagliatelles de concombre, le saumon et la sauce à la crème fraîche.'),
 (23, 5, 'Réserver au frais pendant une heure.');
+
+-- Insertion des secteurs
+INSERT INTO Secteurs (NomSecteur, NombreDeTables)
+VALUES
+('Secteur A', 10),
+('Secteur B', 15);
 
 -- Insertion des employés (tous les rôles sont couverts)
 INSERT INTO Employes (NomEmploye, Role, Salaire, HoraireEmploye, SecteurID)
@@ -524,11 +517,6 @@ VALUES
 ('David Lance', 'Plongeur', 1300.00, 'Matin', NULL),
 ('Joao Félix', 'ChefPartie', 2400.00, 'Matin', NULL);
 
--- Insertion des secteurs
-INSERT INTO Secteurs (NomSecteur, NombreDeTables)
-VALUES
-('Secteur A', 10),
-('Secteur B', 15);
 
 -- Insertion des tables
 INSERT INTO Tables (Capacite, SecteurID, Statut)
@@ -537,17 +525,18 @@ VALUES
 (6, 1, 'Occupée'),
 (2, 2, 'Réservée');
 
+-- Insertion des réservations
+INSERT INTO Reservations (NomClient, DateReservation, HeureReservation, NombrePersonnes, TableID)
+VALUES
+('Alice Dupont', '2024-12-04', '19:00:00', 4, 1),
+('Bernard Lemoine', '2024-12-04', '20:00:00', 6, 2);
+
 -- Insertion des clients
 INSERT INTO Clients (NomClient, ReservationID)
 VALUES
 ('Alice Dupont', 1),
 ('Bernard Lemoine', 2);
 
--- Insertion des réservations
-INSERT INTO Reservations (NomClient, DateReservation, HeureReservation, NombrePersonnes, TableID)
-VALUES
-('Alice Dupont', '2024-12-04', '19:00:00', 4, 1),
-('Bernard Lemoine', '2024-12-04', '20:00:00', 6, 2);
 
 -- Insertion dans l'inventaire
 INSERT INTO Inventaire (NomProduit, Categorie, Quantite, DateExpiration)
@@ -629,3 +618,4 @@ INSERT INTO LogsTaches (EmployeID, Description)
 VALUES
 (1, 'Préparation des feuilletés au crabe'),
 (2, 'Service des entrées pour la table 1');
+
