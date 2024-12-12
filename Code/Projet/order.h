@@ -1,23 +1,43 @@
 #ifndef ORDER_H
 #define ORDER_H
 
+#include <QObject>
 #include <QString>
-#include <QVector>
+#include <QList>
+#include <QPair>
 
-class Order {
+using OrderItem = QPair<QString, int>; // Nom du plat et quantité.
+
+struct OrderDetails {
+    int clientId;
+    int tableId;
+    QList<OrderItem> items; // Liste des plats avec leurs quantités.
+};
+
+class Order : public QObject {
+    Q_OBJECT
+
 public:
-    Order(int clientId, const QVector<QString> &dishes);
+    explicit Order(QObject *parent = nullptr);
 
-    // Getters
-    int getClientId() const;
-    QVector<QString> getDishes() const;
+    void addOrder(int clientId, int tableId, const QList<OrderItem> &items);
+    QList<OrderDetails> getOrders();
 
-    // Setters
-    void setDishes(const QVector<QString> &dishes);
+
+    void removeOrder(int clientId);
+    QList<OrderItem> getItemsForClient(int clientId) const;
+
+
+
+    // Nouvelle méthode pour obtenir toutes les commandes
+    QList<OrderDetails> getOrders() const;
+
+signals:
+    void orderAdded(int clientId, int tableId);
+    void orderRemoved(int clientId);
 
 private:
-    int clientId;           // Identifiant du client
-    QVector<QString> dishes; // Liste des plats commandés
+    QList<OrderDetails> orders; // Stockage des commandes.
 };
 
 #endif // ORDER_H

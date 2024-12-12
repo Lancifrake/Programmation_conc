@@ -5,6 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsTextItem>
 #include <QGraphicsSceneHoverEvent>
+#include <QToolTip>
 
 class Table : public QObject, public QGraphicsPixmapItem {
     Q_OBJECT

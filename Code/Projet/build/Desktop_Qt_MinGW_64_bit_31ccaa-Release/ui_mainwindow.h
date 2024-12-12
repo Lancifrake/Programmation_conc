@@ -38,9 +38,10 @@ public:
     QPushButton *stopButton;
     QPushButton *accelButton;
     QSpacerItem *horizontalSpacer;
-    QPushButton *timeButton;
     QPushButton *alertButton;
-    QPushButton *stockButton;
+    QPushButton *timeButton;
+    QPushButton *livraisonButton;
+    QPushButton *paramButton;
     QFrame *mainFrame;
     QHBoxLayout *horizontalLayout_2;
     QFrame *leftActionButtonsFrame;
@@ -176,20 +177,25 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        timeButton = new QPushButton(headerFrame);
-        timeButton->setObjectName("timeButton");
-
-        horizontalLayout->addWidget(timeButton);
-
         alertButton = new QPushButton(headerFrame);
         alertButton->setObjectName("alertButton");
 
         horizontalLayout->addWidget(alertButton);
 
-        stockButton = new QPushButton(headerFrame);
-        stockButton->setObjectName("stockButton");
+        timeButton = new QPushButton(headerFrame);
+        timeButton->setObjectName("timeButton");
 
-        horizontalLayout->addWidget(stockButton);
+        horizontalLayout->addWidget(timeButton);
+
+        livraisonButton = new QPushButton(headerFrame);
+        livraisonButton->setObjectName("livraisonButton");
+
+        horizontalLayout->addWidget(livraisonButton);
+
+        paramButton = new QPushButton(headerFrame);
+        paramButton->setObjectName("paramButton");
+
+        horizontalLayout->addWidget(paramButton);
 
 
         verticalLayout->addWidget(headerFrame);
@@ -368,9 +374,10 @@ public:
         pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "Stopper", nullptr));
         accelButton->setText(QCoreApplication::translate("MainWindow", "Acc\303\251lerer", nullptr));
-        timeButton->setText(QCoreApplication::translate("MainWindow", "Heure : 00 00", nullptr));
         alertButton->setText(QCoreApplication::translate("MainWindow", "Alertes: 22", nullptr));
-        stockButton->setText(QCoreApplication::translate("MainWindow", "Stock: 22", nullptr));
+        timeButton->setText(QCoreApplication::translate("MainWindow", "Heure : 00 00", nullptr));
+        livraisonButton->setText(QCoreApplication::translate("MainWindow", "Livraison", nullptr));
+        paramButton->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         stockInfoTextBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -385,7 +392,7 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Ingr\303\251dient 3: 20</span></p></body></html>", nullptr));
         diningAreaLabel->setText(QCoreApplication::translate("MainWindow", "Salle de restauration", nullptr));
         kitchenAreaLabel->setText(QCoreApplication::translate("MainWindow", "Cuisine", nullptr));
-        customerMoodButton->setText(QCoreApplication::translate("MainWindow", "L'humeur des clients : 80%", nullptr));
+        customerMoodButton->setText(QCoreApplication::translate("MainWindow", "Menu du restaurant", nullptr));
 
         const bool __sortingEnabled = menuListWidget->isSortingEnabled();
         menuListWidget->setSortingEnabled(false);

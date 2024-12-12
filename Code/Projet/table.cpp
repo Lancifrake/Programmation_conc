@@ -1,19 +1,21 @@
 #include "table.h"
-#include <QGraphicsPixmapItem>
-#include <QGraphicsTextItem>
+
 #include <QToolTip>
 
+
 Table::Table(int id, int capacity, const QString &imagePath, QObject *parent)
-    : QObject(parent), QGraphicsPixmapItem(QPixmap(imagePath)), id(id), capacity(capacity), occupied(false) {
-    setScale(1.5); // Ajustez l'échelle selon vos besoins
-    textItem = new QGraphicsTextItem(QString::number(capacity), this);
-    textItem->setPos(boundingRect().center());
-    setAcceptHoverEvents(true); // Activer les événements de survol
+    : QObject(parent), QGraphicsPixmapItem(QPixmap(imagePath)),id(id), capacity(capacity), occupied(false) {
+
+    setScale(1.0); // Ajustez l'échelle selon vos besoins
+
+    setAcceptHoverEvents(true);
+
+    textItem = new QGraphicsTextItem(QString("Table %1\nCapacité: %2").arg(id).arg(capacity), this);
+    textItem->setDefaultTextColor(Qt::white);
+    textItem->setPos(0, -20);
 }
 
-Table::~Table() {
-    delete textItem;
-}
+Table::~Table() {}
 
 void Table::setPosition(int x, int y) {
     setPos(x, y);
@@ -21,7 +23,7 @@ void Table::setPosition(int x, int y) {
 
 void Table::setOccupied(bool occupied) {
     this->occupied = occupied;
-    setOpacity(occupied ? 0.5 : 0.0); // Changer l'opacité pour indiquer l'occupation
+    setOpacity(occupied ? 0.5 : 1.0);
 }
 
 bool Table::isOccupied() const {
@@ -36,9 +38,11 @@ int Table::getId() const {
     return id;
 }
 
+
 QGraphicsPixmapItem* Table::getGraphicsItem() {
     return this;
 }
+
 
 const QGraphicsPixmapItem* Table::getGraphicsItem() const {
     return this;

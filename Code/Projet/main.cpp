@@ -1,14 +1,18 @@
 
-#include <QApplication>
 #include "mainwindow.h"
 #include <QApplication>
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include <QIcon>
+
 
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
+
+    a.setWindowIcon(QIcon(":img/menu1.png"));
+
 
     MainWindow window;
 

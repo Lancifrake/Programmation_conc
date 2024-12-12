@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
@@ -40,12 +41,15 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *timeButton;
     QPushButton *alertButton;
-    QPushButton *stockButton;
+    QPushButton *livraisonButton;
+    QPushButton *paramButton;
     QFrame *mainFrame;
     QHBoxLayout *horizontalLayout_2;
     QFrame *leftActionButtonsFrame;
     QVBoxLayout *verticalLayout_4;
     QTextBrowser *stockInfoTextBrowser;
+    QPushButton *pushButton;
+    QListWidget *orderList;
     QFrame *diningAreaFrame;
     QVBoxLayout *verticalLayout_2;
     QLabel *diningAreaLabel;
@@ -58,9 +62,7 @@ public:
     QVBoxLayout *verticalLayout_5;
     QPushButton *customerMoodButton;
     QListWidget *menuListWidget;
-    QPushButton *pushButton;
     QTextBrowser *tableInfoTextBrowser;
-    QPushButton *pushButton_2;
     QTextBrowser *customerInfoTextBrowser;
     QFrame *dashboardFrame;
     QHBoxLayout *horizontalLayout_3;
@@ -68,14 +70,14 @@ public:
     QProgressBar *stockLevelsProgressBar;
     QLabel *tableSeatsLabel;
     QProgressBar *tableSeatsProgressBar;
-    QLabel *customerNumberLabel;
-    QProgressBar *customerNumberProgressBar;
+    QLabel *clientMoodLabel;
+    QProgressBar *clientMoodProgressBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1793, 821);
+        MainWindow->resize(1746, 820);
         MainWindow->setStyleSheet(QString::fromUtf8("/* Background principal */\n"
 "QWidget {\n"
 "    background-color: #e5e7e6;\n"
@@ -84,9 +86,7 @@ public:
 "\n"
 "/* Boutons */\n"
 "QPushButton {\n"
-"    background-color: #B67332;\n"
 "    selection-color: red;\n"
-"    border: 2px solid #93441A;\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    color: white;\n"
@@ -95,7 +95,7 @@ public:
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #DAAB3A;  \n"
-"    border-color: #93441A;\n"
+"    border-color: #607890;\n"
 " \n"
 "}\n"
 "\n"
@@ -106,43 +106,43 @@ public:
 "/* Labels */\n"
 "QLabel {\n"
 "    font: bold 16px \"Segoe UI\";\n"
-"    color: white;\n"
+"    color: #ffffff;\n"
 "    background-color: transparent;\n"
 "    text-align: center;\n"
 "}\n"
 "\n"
 "/* Frames */\n"
 "QFrame {\n"
-"    background-color: #B67332;\n"
-"    border: 2px solid #93441A;\n"
+"    background-color: #9ab4ce;\n"
+"    border: 2px solid #607890;\n"
 "    border-radius: 10px;\n"
 "}\n"
 "\n"
 "/* Progress Bars */\n"
 "QProgressBar {\n"
-"    border: 2px solid #B67332;\n"
+"    border: 2px solid #607890;\n"
 "    border-radius: 5px;\n"
 "    background: #2e2e3e;\n"
 "    text-align: center;\n"
-""
-                        "    color: white;\n"
+"    color: white;\n"
 "    font: bold 12px \"Segoe UI\";\n"
 "}\n"
-"\n"
+""
+                        "\n"
 "QProgressBar::chunk {\n"
-"    background-color: #DAAB3A;\n"
 "    width: 20px;\n"
 "}\n"
 "\n"
 "/* Text Browsers */\n"
 "QTextBrowser {\n"
-"    border: 2px solid #93441A;\n"
+"    border: 2px solid #607890;\n"
 "    border-radius: 10px;\n"
-"    background-color: #B67332;\n"
+"    background-color: #9ab4ce;\n"
 "    color: white;\n"
 "    font: 12px \"Segoe UI\";\n"
 "    padding: 10px;\n"
-"}"));
+"}\n"
+""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -155,21 +155,37 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         stratButton = new QPushButton(headerFrame);
         stratButton->setObjectName("stratButton");
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/img/jouer.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        stratButton->setIcon(icon);
+        stratButton->setIconSize(QSize(32, 32));
 
         horizontalLayout->addWidget(stratButton);
 
         pauseButton = new QPushButton(headerFrame);
         pauseButton->setObjectName("pauseButton");
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/img/pause.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pauseButton->setIcon(icon1);
+        pauseButton->setIconSize(QSize(32, 32));
 
         horizontalLayout->addWidget(pauseButton);
 
         stopButton = new QPushButton(headerFrame);
         stopButton->setObjectName("stopButton");
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/img/bouton-darret.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        stopButton->setIcon(icon2);
+        stopButton->setIconSize(QSize(32, 32));
 
         horizontalLayout->addWidget(stopButton);
 
         accelButton = new QPushButton(headerFrame);
         accelButton->setObjectName("accelButton");
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/img/avance-rapide.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        accelButton->setIcon(icon3);
+        accelButton->setIconSize(QSize(32, 32));
 
         horizontalLayout->addWidget(accelButton);
 
@@ -184,13 +200,30 @@ public:
 
         alertButton = new QPushButton(headerFrame);
         alertButton->setObjectName("alertButton");
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/cercle.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        alertButton->setIcon(icon4);
+        alertButton->setIconSize(QSize(32, 32));
 
         horizontalLayout->addWidget(alertButton);
 
-        stockButton = new QPushButton(headerFrame);
-        stockButton->setObjectName("stockButton");
+        livraisonButton = new QPushButton(headerFrame);
+        livraisonButton->setObjectName("livraisonButton");
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/inventaire (1).png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        livraisonButton->setIcon(icon5);
+        livraisonButton->setIconSize(QSize(32, 32));
 
-        horizontalLayout->addWidget(stockButton);
+        horizontalLayout->addWidget(livraisonButton);
+
+        paramButton = new QPushButton(headerFrame);
+        paramButton->setObjectName("paramButton");
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/parametres.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        paramButton->setIcon(icon6);
+        paramButton->setIconSize(QSize(32, 32));
+
+        horizontalLayout->addWidget(paramButton);
 
 
         verticalLayout->addWidget(headerFrame);
@@ -210,8 +243,24 @@ public:
         stockInfoTextBrowser = new QTextBrowser(leftActionButtonsFrame);
         stockInfoTextBrowser->setObjectName("stockInfoTextBrowser");
         stockInfoTextBrowser->setMinimumSize(QSize(200, 90));
+        stockInfoTextBrowser->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout_4->addWidget(stockInfoTextBrowser);
+
+        pushButton = new QPushButton(leftActionButtonsFrame);
+        pushButton->setObjectName("pushButton");
+
+        verticalLayout_4->addWidget(pushButton);
+
+        orderList = new QListWidget(leftActionButtonsFrame);
+        new QListWidgetItem(orderList);
+        new QListWidgetItem(orderList);
+        new QListWidgetItem(orderList);
+        new QListWidgetItem(orderList);
+        new QListWidgetItem(orderList);
+        orderList->setObjectName("orderList");
+
+        verticalLayout_4->addWidget(orderList);
 
 
         horizontalLayout_2->addWidget(leftActionButtonsFrame);
@@ -230,14 +279,20 @@ public:
 
         diningAreaView = new QGraphicsView(diningAreaFrame);
         diningAreaView->setObjectName("diningAreaView");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(diningAreaView->sizePolicy().hasHeightForWidth());
+        diningAreaView->setSizePolicy(sizePolicy);
         diningAreaView->setMinimumSize(QSize(600, 600));
+        diningAreaView->setMaximumSize(QSize(600, 600));
         diningAreaView->setStyleSheet(QString::fromUtf8("QGraphicsView {\n"
-"    \n"
-"	\n"
-"	background-image: url(:/img/herbe.jpg);\n"
+"    background-image: url(:img/solee.jpg);\n"
 "    background-repeat: no-repeat;\n"
 "    background-position: center;\n"
 "}"));
+        diningAreaView->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        diningAreaView->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::NoBrush);
         diningAreaView->setBackgroundBrush(brush);
@@ -265,11 +320,12 @@ public:
         kitchenAreaView->setObjectName("kitchenAreaView");
         kitchenAreaView->setMinimumSize(QSize(600, 600));
         kitchenAreaView->setStyleSheet(QString::fromUtf8("QGraphicsView {\n"
-"    \n"
-"	background-image: url(:/img/herbe.jpg);\n"
+"    background-image: url(:img/solee.jpg);\n"
 "    background-repeat: no-repeat;\n"
 "    background-position: center;\n"
 "}"));
+        kitchenAreaView->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        kitchenAreaView->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
 
         verticalLayout_3->addWidget(kitchenAreaView);
 
@@ -298,21 +354,11 @@ public:
 
         verticalLayout_5->addWidget(menuListWidget);
 
-        pushButton = new QPushButton(rightInfoFrame);
-        pushButton->setObjectName("pushButton");
-
-        verticalLayout_5->addWidget(pushButton);
-
         tableInfoTextBrowser = new QTextBrowser(rightInfoFrame);
         tableInfoTextBrowser->setObjectName("tableInfoTextBrowser");
         tableInfoTextBrowser->setMinimumSize(QSize(200, 100));
 
         verticalLayout_5->addWidget(tableInfoTextBrowser);
-
-        pushButton_2 = new QPushButton(rightInfoFrame);
-        pushButton_2->setObjectName("pushButton_2");
-
-        verticalLayout_5->addWidget(pushButton_2);
 
         customerInfoTextBrowser = new QTextBrowser(rightInfoFrame);
         customerInfoTextBrowser->setObjectName("customerInfoTextBrowser");
@@ -339,7 +385,6 @@ public:
 
         stockLevelsProgressBar = new QProgressBar(dashboardFrame);
         stockLevelsProgressBar->setObjectName("stockLevelsProgressBar");
-        stockLevelsProgressBar->setMaximumSize(QSize(438, 16777215));
         stockLevelsProgressBar->setValue(70);
 
         horizontalLayout_3->addWidget(stockLevelsProgressBar);
@@ -355,16 +400,16 @@ public:
 
         horizontalLayout_3->addWidget(tableSeatsProgressBar);
 
-        customerNumberLabel = new QLabel(dashboardFrame);
-        customerNumberLabel->setObjectName("customerNumberLabel");
+        clientMoodLabel = new QLabel(dashboardFrame);
+        clientMoodLabel->setObjectName("clientMoodLabel");
 
-        horizontalLayout_3->addWidget(customerNumberLabel);
+        horizontalLayout_3->addWidget(clientMoodLabel);
 
-        customerNumberProgressBar = new QProgressBar(dashboardFrame);
-        customerNumberProgressBar->setObjectName("customerNumberProgressBar");
-        customerNumberProgressBar->setValue(50);
+        clientMoodProgressBar = new QProgressBar(dashboardFrame);
+        clientMoodProgressBar->setObjectName("clientMoodProgressBar");
+        clientMoodProgressBar->setValue(50);
 
-        horizontalLayout_3->addWidget(customerNumberProgressBar);
+        horizontalLayout_3->addWidget(clientMoodProgressBar);
 
 
         verticalLayout->addWidget(dashboardFrame);
@@ -379,13 +424,14 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Projet", nullptr));
-        stratButton->setText(QCoreApplication::translate("MainWindow", "D\303\251marrer", nullptr));
-        pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
-        stopButton->setText(QCoreApplication::translate("MainWindow", "Stopper", nullptr));
-        accelButton->setText(QCoreApplication::translate("MainWindow", "Acc\303\251lerer", nullptr));
+        stratButton->setText(QString());
+        pauseButton->setText(QString());
+        stopButton->setText(QString());
+        accelButton->setText(QString());
         timeButton->setText(QCoreApplication::translate("MainWindow", "Heure : 00 00", nullptr));
-        alertButton->setText(QCoreApplication::translate("MainWindow", "Alertes: 22", nullptr));
-        stockButton->setText(QCoreApplication::translate("MainWindow", "Stock: 22", nullptr));
+        alertButton->setText(QString());
+        livraisonButton->setText(QString());
+        paramButton->setText(QString());
         stockInfoTextBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -393,26 +439,41 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Niveaux de stock:</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Ingr\303\251dient 1: 50</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
-                        "-qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Ingr\303\251dient 2: 30</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Ingr\303\251dient 3: 20</span></p></body></html>", nullptr));
-        diningAreaLabel->setText(QCoreApplication::translate("MainWindow", "Salle de restauration.", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">Niveaux de stock:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Ingr\303\251dient 1: 50</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0"
+                        "px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Ingr\303\251dient 2: 30</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Ingr\303\251dient 3: 20</span></p></body></html>", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Commandes", nullptr));
+
+        const bool __sortingEnabled = orderList->isSortingEnabled();
+        orderList->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = orderList->item(0);
+        ___qlistwidgetitem->setText(QCoreApplication::translate("MainWindow", "Nouvel \303\251l\303\251ment", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = orderList->item(1);
+        ___qlistwidgetitem1->setText(QCoreApplication::translate("MainWindow", "Nouvel \303\251l\303\251ment", nullptr));
+        QListWidgetItem *___qlistwidgetitem2 = orderList->item(2);
+        ___qlistwidgetitem2->setText(QCoreApplication::translate("MainWindow", "Nouvel \303\251l\303\251ment", nullptr));
+        QListWidgetItem *___qlistwidgetitem3 = orderList->item(3);
+        ___qlistwidgetitem3->setText(QCoreApplication::translate("MainWindow", "Nouvel \303\251l\303\251ment", nullptr));
+        QListWidgetItem *___qlistwidgetitem4 = orderList->item(4);
+        ___qlistwidgetitem4->setText(QCoreApplication::translate("MainWindow", "Nouvel \303\251l\303\251ment", nullptr));
+        orderList->setSortingEnabled(__sortingEnabled);
+
+        diningAreaLabel->setText(QCoreApplication::translate("MainWindow", "Salle de restauration", nullptr));
         kitchenAreaLabel->setText(QCoreApplication::translate("MainWindow", "Cuisine", nullptr));
         customerMoodButton->setText(QCoreApplication::translate("MainWindow", "Menu du restaurant", nullptr));
 
-        const bool __sortingEnabled = menuListWidget->isSortingEnabled();
+        const bool __sortingEnabled1 = menuListWidget->isSortingEnabled();
         menuListWidget->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = menuListWidget->item(0);
-        ___qlistwidgetitem->setText(QCoreApplication::translate("MainWindow", "Plat 1", nullptr));
-        QListWidgetItem *___qlistwidgetitem1 = menuListWidget->item(1);
-        ___qlistwidgetitem1->setText(QCoreApplication::translate("MainWindow", "Plat 2", nullptr));
-        QListWidgetItem *___qlistwidgetitem2 = menuListWidget->item(2);
-        ___qlistwidgetitem2->setText(QCoreApplication::translate("MainWindow", "Plat 3", nullptr));
-        menuListWidget->setSortingEnabled(__sortingEnabled);
+        QListWidgetItem *___qlistwidgetitem5 = menuListWidget->item(0);
+        ___qlistwidgetitem5->setText(QCoreApplication::translate("MainWindow", "Salade", nullptr));
+        QListWidgetItem *___qlistwidgetitem6 = menuListWidget->item(1);
+        ___qlistwidgetitem6->setText(QCoreApplication::translate("MainWindow", "Glace avec Creme", nullptr));
+        QListWidgetItem *___qlistwidgetitem7 = menuListWidget->item(2);
+        ___qlistwidgetitem7->setText(QCoreApplication::translate("MainWindow", "Jus de raison", nullptr));
+        menuListWidget->setSortingEnabled(__sortingEnabled1);
 
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Infos tables", nullptr));
         tableInfoTextBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -420,11 +481,11 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Total tables: 20</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Tables occup\303\251es: 10</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0"
-                        "px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Tables disponibles: 10</span></p></body></html>", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Infos clients", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">Infos tables:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Total tables: 20</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-blo"
+                        "ck-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Tables occup\303\251es: 10</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Tables disponibles: 10</span></p></body></html>", nullptr));
         customerInfoTextBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -432,13 +493,14 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Total clients: 50</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Clients en attente: 5</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
-                        "-qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">- Clients servis: 45</span></p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">Infos clients:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Total clients: 50</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
+                        "lock-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Clients en attente: 5</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt;\">- Clients servis: 45</span></p></body></html>", nullptr));
         stockLevelsLabel->setText(QCoreApplication::translate("MainWindow", "Niveaux de stock", nullptr));
         tableSeatsLabel->setText(QCoreApplication::translate("MainWindow", "Places \303\240 table", nullptr));
-        customerNumberLabel->setText(QCoreApplication::translate("MainWindow", "Nombre de clients", nullptr));
+        clientMoodLabel->setText(QCoreApplication::translate("MainWindow", "\360\237\231\202", nullptr));
     } // retranslateUi
 
 };

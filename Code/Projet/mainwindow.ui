@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1793</width>
-    <height>821</height>
+    <width>1746</width>
+    <height>820</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,9 +22,7 @@ QWidget {
 
 /* Boutons */
 QPushButton {
-    background-color: #B67332;
     selection-color: red;
-    border: 2px solid #93441A;
     border-radius: 10px;
     padding: 10px;
     color: white;
@@ -33,7 +31,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #DAAB3A;  
-    border-color: #93441A;
+    border-color: #607890;
  
 }
 
@@ -44,21 +42,21 @@ QPushButton:pressed {
 /* Labels */
 QLabel {
     font: bold 16px &quot;Segoe UI&quot;;
-    color: white;
+    color: #ffffff;
     background-color: transparent;
     text-align: center;
 }
 
 /* Frames */
 QFrame {
-    background-color: #B67332;
-    border: 2px solid #93441A;
+    background-color: #9ab4ce;
+    border: 2px solid #607890;
     border-radius: 10px;
 }
 
 /* Progress Bars */
 QProgressBar {
-    border: 2px solid #B67332;
+    border: 2px solid #607890;
     border-radius: 5px;
     background: #2e2e3e;
     text-align: center;
@@ -67,19 +65,19 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-    background-color: #DAAB3A;
     width: 20px;
 }
 
 /* Text Browsers */
 QTextBrowser {
-    border: 2px solid #93441A;
+    border: 2px solid #607890;
     border-radius: 10px;
-    background-color: #B67332;
+    background-color: #9ab4ce;
     color: white;
     font: 12px &quot;Segoe UI&quot;;
     padding: 10px;
-}</string>
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -95,28 +93,68 @@ QTextBrowser {
        <item>
         <widget class="QPushButton" name="stratButton">
          <property name="text">
-          <string>Démarrer</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/jouer.png</normaloff>:/img/jouer.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pauseButton">
          <property name="text">
-          <string>Pause</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/pause.png</normaloff>:/img/pause.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="stopButton">
          <property name="text">
-          <string>Stopper</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/bouton-darret.png</normaloff>:/img/bouton-darret.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="accelButton">
          <property name="text">
-          <string>Accélerer</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/avance-rapide.png</normaloff>:/img/avance-rapide.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -143,14 +181,51 @@ QTextBrowser {
        <item>
         <widget class="QPushButton" name="alertButton">
          <property name="text">
-          <string>Alertes: 22</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/cercle.png</normaloff>:/img/cercle.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="stockButton">
+        <widget class="QPushButton" name="livraisonButton">
          <property name="text">
-          <string>Stock: 22</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/inventaire (1).png</normaloff>:/img/inventaire (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="paramButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/img/parametres.png</normaloff>:/img/parametres.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -183,6 +258,9 @@ QTextBrowser {
               <height>90</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="html">
              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -191,11 +269,47 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;Niveaux de stock:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Ingrédient 1: 50&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Ingrédient 2: 30&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Ingrédient 3: 20&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;Niveaux de stock:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Ingrédient 1: 50&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Ingrédient 2: 30&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Ingrédient 3: 20&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Commandes</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="orderList">
+            <item>
+             <property name="text">
+              <string>Nouvel élément</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nouvel élément</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nouvel élément</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nouvel élément</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nouvel élément</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
@@ -213,7 +327,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <item>
            <widget class="QLabel" name="diningAreaLabel">
             <property name="text">
-             <string>Salle de restauration.</string>
+             <string>Salle de restauration</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -222,7 +336,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
           </item>
           <item>
            <widget class="QGraphicsView" name="diningAreaView">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
+             <size>
+              <width>600</width>
+              <height>600</height>
+             </size>
+            </property>
+            <property name="maximumSize">
              <size>
               <width>600</width>
               <height>600</height>
@@ -230,12 +356,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
             <property name="styleSheet">
              <string notr="true">QGraphicsView {
-    
-	
-	background-image: url(:/img/herbe.jpg);
+    background-image: url(:img/solee.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
             </property>
             <property name="backgroundBrush">
              <brush brushstyle="NoBrush">
@@ -282,11 +412,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
             <property name="styleSheet">
              <string notr="true">QGraphicsView {
-    
-	background-image: url(:/img/herbe.jpg);
+    background-image: url(:img/solee.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
             </property>
            </widget>
           </item>
@@ -321,26 +456,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
             <item>
              <property name="text">
-              <string>Plat 1</string>
+              <string>Salade</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Plat 2</string>
+              <string>Glace avec Creme</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Plat 3</string>
+              <string>Jus de raison</string>
              </property>
             </item>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="text">
-             <string>Infos tables</string>
-            </property>
            </widget>
           </item>
           <item>
@@ -359,16 +487,10 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Total tables: 20&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Tables occupées: 10&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Tables disponibles: 10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="text">
-             <string>Infos clients</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;Infos tables:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Total tables: 20&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Tables occupées: 10&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Tables disponibles: 10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -388,9 +510,10 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Total clients: 50&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Clients en attente: 5&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;- Clients servis: 45&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;Infos clients:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Total clients: 50&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Clients en attente: 5&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;- Clients servis: 45&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -418,12 +541,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item>
         <widget class="QProgressBar" name="stockLevelsProgressBar">
-         <property name="maximumSize">
-          <size>
-           <width>438</width>
-           <height>16777215</height>
-          </size>
-         </property>
          <property name="value">
           <number>70</number>
          </property>
@@ -444,14 +561,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="customerNumberLabel">
+        <widget class="QLabel" name="clientMoodLabel">
          <property name="text">
-          <string>Nombre de clients</string>
+          <string>🙂</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QProgressBar" name="customerNumberProgressBar">
+        <widget class="QProgressBar" name="clientMoodProgressBar">
          <property name="value">
           <number>50</number>
          </property>

@@ -1,54 +1,96 @@
 #include "client.h"
-#include <QGraphicsTextItem>
-#include <QFont>
+#include <QThread>
+#include <QDebug>
 
-Client::Client(const QString &imagePath, int id, QObject *parent)
-    : QObject(parent), graphicsItem(new QGraphicsPixmapItem(QPixmap(imagePath))), id(id), orderPopup(nullptr)
-{
-    graphicsItem->setZValue(1);
+Client::Client(int id, int groupSize, QObject* parent)
+    : QObject(parent), id(id), groupSize(groupSize), isSeated(false), hasOrdered(false), isConsuming(false), clientImage(nullptr), scene(nullptr), timeline(nullptr), timelineDuration(0) {
+
+
+    // Chargement d'une image PNG représentant le client
+    QPixmap pixmap(":/images/client.png"); // Chemin à adapter selon votre projet
+
+    // Création d'un QGraphicsPixmapItem pour représenter visuellement le client
+    clientImage = new QGraphicsPixmapItem(pixmap);
+    clientImage->setTransformationMode(Qt::SmoothTransformation);
 }
 
-Client::~Client()
-{
-    delete graphicsItem;
-    if (orderPopup) {
-        delete orderPopup;
-    }
-}
-
-void Client::setPosition(int x, int y, double scale)
-{
-    if (graphicsItem) {
-        graphicsItem->setPos(x, y);
-        graphicsItem->setScale(scale / 100.0);
-    }
-}
-
-void Client::orderDish(const QString &dish)
-{
-    Q_UNUSED(dish);
-}
-
-QGraphicsPixmapItem* Client::getGraphicsItem() const
-{
-    return graphicsItem;
-}
-
-int Client::getId() const
-{
+int Client::getId() const {
     return id;
 }
 
-void Client::showOrderPopup(const QString &message, QGraphicsScene *scene)
-{
-    if (orderPopup) {
-        scene->removeItem(orderPopup);
-        delete orderPopup;
-    }
+int Client::getGroupSize() const {
+    return groupSize;
+}
 
-    orderPopup = new QGraphicsTextItem(message);
-    orderPopup->setFont(QFont("Arial", 12));
-    orderPopup->setPos(graphicsItem->pos().x(), graphicsItem->pos().y() - 30);
-    orderPopup->setZValue(2);
-    scene->addItem(orderPopup);
+bool Client::getIsSeated() const {
+    return isSeated;
+}
+
+bool Client::getHasOrdered() const {
+    return hasOrdered;
+}
+
+bool Client::getIsConsuming() const {
+    return isConsuming;
+}
+
+void Client::setSeated(bool seated) {
+    isSeated = seated;
+}
+
+void Client::setHasOrdered(bool ordered) {
+    hasOrdered = ordered;
+}
+
+void Client::setConsuming(bool consuming) {
+    isConsuming = consuming;
+}
+
+void Client::moveToPosition(const QPointF& position) {
+    if (clientImage) {
+        clientImage->setPos(position);
+    }
+}
+
+void Client::removeFromScene() {
+    if (clientImage && scene) {
+        scene->removeItem(clientImage);
+    }
+}
+
+void Client::startTimeline() {
+    if (!timeline) {
+        timeline = new QThread(this);
+        connect(timeline, &QThread::started, this, &Client::runTimeline);
+        timeline->start();
+    }
+}
+
+void Client::pauseTimeline() {
+    if (timeline) {
+        timeline->requestInterruption();
+        timeline->wait();
+    }
+}
+
+void Client::stopTimeline() {
+    if (timeline) {
+        timeline->terminate();
+        timeline->wait();
+        delete timeline;
+        timeline = nullptr;
+    }
+}
+
+void Client::setDuration(int duration) {
+    timelineDuration = duration;
+}
+
+int Client::duration() const {
+    return timelineDuration;
+}
+
+void Client::runTimeline() {
+    QThread::sleep(timelineDuration);
+    emit clientLeft();
 }
