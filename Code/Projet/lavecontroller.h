@@ -1,6 +1,6 @@
 #ifndef LAVECONTROLLER_H
 #define LAVECONTROLLER_H
-
+//
 #include <QVector>
 #include "lave.h"
 
