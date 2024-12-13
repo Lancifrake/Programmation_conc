@@ -1,0 +1,92 @@
+<RCC>
+  <qresource>
+    <file>img/parametres.png</file>
+    <file>img/pause.png</file>
+    <file>img/alimentation-saine.ico</file>
+    <file>img/alimentation-saine.png</file>
+    <file>img/aliments.png</file>
+    <file>img/avance-rapide.png</file>
+    <file>img/boite-a-pain.png</file>
+    <file>img/bouteille-de-lait.png</file>
+    <file>img/bouteille-de-vin.png</file>
+    <file>img/bouteille-en-plastique.png</file>
+    <file>img/bouton-darret (1).png</file>
+    <file>img/bouton-darret.png</file>
+    <file>img/bouton-davance-rapide.png</file>
+    <file>img/burger.png</file>
+    <file>img/cercle.png</file>
+    <file>img/cercle_2.png</file>
+    <file>img/chaise-en-bois.png</file>
+    <file>img/chef.png</file>
+    <file>img/chefp.png</file>
+    <file>img/client.png</file>
+    <file>img/client_2.png</file>
+    <file>img/commis.png</file>
+    <file>img/compt.png</file>
+    <file>img/comptoir-de-bar.png</file>
+    <file>img/contrer.png</file>
+    <file>img/cuisine.png</file>
+    <file>img/des-portes.png</file>
+    <file>img/du-jus-dorange.png</file>
+    <file>img/evier.png</file>
+    <file>img/fleurs (1).png</file>
+    <file>img/fleurs.png</file>
+    <file>img/food.png</file>
+    <file>img/four.png</file>
+    <file>img/frigo.png</file>
+    <file>img/Frigo_1.jpg</file>
+    <file>img/gants.png</file>
+    <file>img/image-removebg-preview (1).png</file>
+    <file>img/images.jpeg</file>
+    <file>img/img.rar</file>
+    <file>img/inventaire (1).png</file>
+    <file>img/inventaire.png</file>
+    <file>img/jouer.png</file>
+    <file>img/la-fenetre.png</file>
+    <file>img/lav.png</file>
+    <file>img/la-vaisselle.png</file>
+    <file>img/lave-vaisselle (1).png</file>
+    <file>img/lave-vaisselle.png</file>
+    <file>img/les-plantes.png</file>
+    <file>img/les-plats-du-jour.png</file>
+    <file>img/maitre.png</file>
+    <file>img/market.jpeg</file>
+    <file>img/market1.jpeg</file>
+    <file>img/menu.png</file>
+    <file>img/menu1.png</file>
+    <file>img/meridienne.png</file>
+    <file>img/mixeur (1).png</file>
+    <file>img/mixeur.png</file>
+    <file>img/mur.png</file>
+    <file>img/mur-de-briques.png</file>
+    <file>img/nouveau-compte.png</file>
+    <file>img/panneau-stop.png</file>
+    <file>img/petit-dejeuner.png</file>
+    <file>img/placard (1).png</file>
+    <file>img/placard.png</file>
+    <file>img/plaque.jpeg</file>
+    <file>img/plat.png</file>
+    <file>img/plongeur.png</file>
+    <file>img/porte.png</file>
+    <file>img/porte-de-sortie.png</file>
+    <file>img/pot.png</file>
+    <file>img/pot-de-fleur.png</file>
+    <file>img/rang.png</file>
+    <file>img/R-removebg-preview.png</file>
+    <file>img/salade (1).png</file>
+    <file>img/salade (2).png</file>
+    <file>img/salade.png</file>
+    <file>img/serve.png</file>
+    <file>img/serveur.png</file>
+    <file>img/sol.png</file>
+    <file>img/table.png</file>
+    <file>img/table_1.png</file>
+    <file>img/table_2.png</file>
+    <file>img/table_3..png</file>
+    <file>img/table_3.png</file>
+    <file>img/table-ronde.png</file>
+    <file>img/ustensiles.png</file>
+    <file>img/vase.png</file>
+    <file>img/solee.jpg</file>
+  </qresource>
+</RCC>
